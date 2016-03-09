@@ -46,7 +46,7 @@ public class BlueToothScan extends Thread implements BlueToothCallbackCreator.BT
     /**
      * 设置蓝牙设备搜索时长 默认20秒钟
      **/
-    private static final long SCAN_PERIOD = 20000;
+    private static final long SCAN_PERIOD = 15000;
 
     /**
      * 初始化蓝牙搜索器
