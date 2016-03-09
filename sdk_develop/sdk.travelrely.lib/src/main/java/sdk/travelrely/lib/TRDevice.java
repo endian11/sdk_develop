@@ -3,8 +3,10 @@ package sdk.travelrely.lib;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 
 import sdk.travelrely.lib.device.bluetooth.BlueToothScan;
+import sdk.travelrely.lib.device.exception.BLEException;
 import sdk.travelrely.lib.device.manager.BLEManager;
 import sdk.travelrely.lib.minterface.IDeviceface;
 import sdk.travelrely.lib.minterface.ITRCallback;
@@ -42,14 +44,22 @@ public class TRDevice implements IDeviceface {
 
     /**
      * 开始搜索蓝牙设备
+     *
      * @param callback
      */
     @Override
-    public void startScan(@NonNull ITRCallback callback) {
+    public void startScan(ITRCallback callback) throws BLEException {
+        if (callback == null) {
+            if (mCallback != null) {
+                throw new BLEException("ITRCallback can not be null");
+            }
+        }
+
+        mCallback = callback;
 
         if (scan != null) {
             if (scan.isSearching()) {
-                if(mCallback!=null)
+                if (mCallback != null)
                     mCallback.faild("bluetooth is in searching....please stop it first");
                 return;
             } else {
@@ -57,7 +67,6 @@ public class TRDevice implements IDeviceface {
             }
         }
 
-        mCallback = callback;
         scan = new BlueToothScan(mCallback);
         scan.start();
     }
@@ -66,17 +75,25 @@ public class TRDevice implements IDeviceface {
      * connect the bluetooth box
      */
     @Override
-    public Boolean pairByDevice(@NonNull BluetoothDevice device) {
+    public Boolean pairByDevice(BluetoothDevice device) {
         //TODO
         stopScan();
-        BLEManager.getDefault().connect(device.getAddress());
-        return true;
+        if (device == null) {
+            if (mCallback != null)
+                mCallback.faild("BluetoothDevice is null");
+            return false;
+        }
+        return BLEManager.getDefault().connect(device.getAddress());
     }
 
-
     @Override
-    public void pairByUUID(String UUID) {
-
+    public Boolean pairByMacAddress(String macaddress) {
+        stopScan();
+        if (TextUtils.isEmpty(macaddress)) {
+            if (mCallback != null)
+                mCallback.faild("macAddress can not be empty");
+        }
+        return BLEManager.getDefault().connect(macaddress);
     }
 
     /**

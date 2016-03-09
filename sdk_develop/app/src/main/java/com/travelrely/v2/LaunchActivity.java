@@ -233,7 +233,6 @@ public class LaunchActivity extends Activity implements ITRCallback, View.OnClic
                                             Toast.makeText(LaunchActivity.this, "正在发送邮件...", Toast.LENGTH_LONG).show();
                                         }
                                     });
-
                                 }
                             });
                         }
