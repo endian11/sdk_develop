@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="navigation_btn_min_width">50dp</dimen>
+    <dimen name="navigation_btn_min_height">32dp</dimen>
+    <dimen name="navigation_height">52dp</dimen>
+    <dimen name="navigation_btn_margin">12dp</dimen>
+    <dimen name="padding_small">16dp</dimen>
+    <dimen name="padding_small_mini">8dp</dimen>
+    <dimen name="padding_medium">24dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_small_mini">6dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="text_size_1">18sp</dimen>
+    <dimen name="text_size_2">48sp</dimen>
+    <dimen name="text_size_3">28sp</dimen>
+    <dimen name="title_radio_btn_width">90dp</dimen>
+    <!-- 圆边半径 -->
+
+    <dimen name="corners_radius">12dip</dimen>
+    <dimen name="corners_radius_min">5dip</dimen>
+    <!-- 文字离边沿的长度 -->
+    <dimen name="corners_padding">12dp</dimen>
+    <dimen name="gray_search_height">35dp</dimen>
+    <dimen name="text_size_0">10sp</dimen>
+    <dimen name="corners_stroke">20dp</dimen>
+    <dimen name="title_min_size">15dp</dimen>
+    <dimen name="click_scale">3dp</dimen>
+    <dimen name="bladeview_popup_height">80dp</dimen>
+    <dimen name="bladeview_popup_fontsize">20sp</dimen>
+
+    <!-- 日历 -->
+    <dimen name="calendar_day_headers_paddingbottom">4dp</dimen>
+    <dimen name="calendar_month_topmargin">16dp</dimen>
+    <dimen name="calendar_month_title_bottommargin">4dp</dimen>
+    <dimen name="calendar_text_medium">18sp</dimen>
+    <dimen name="calendar_text_small">14sp</dimen>
+    <dimen name="calendar_text_small_week">13sp</dimen>
+
+</resources>

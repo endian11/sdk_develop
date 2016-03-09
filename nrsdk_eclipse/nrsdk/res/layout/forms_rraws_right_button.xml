@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/formsArrawsRightButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/forms_arrow_right_btn_bg"
+    android:duplicateParentState="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv_coutent"
+        style="@style/style_meal_one_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="left"
+        android:paddingLeft="12dp" 
+        android:maxLines="3"
+        android:paddingRight="30dp"
+        android:ellipsize="end"
+        />
+
+    <TextView
+        android:id="@+id/tv_centre"
+        style="@style/style_meal_one_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_right"
+        style="@style/style_meal_one_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/img_rraws"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_rraws"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:src="@drawable/arrow_right_bg" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/alarm_on_off"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textOff=""
+        android:textOn="" 
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_right2"
+        style="@style/style_meal_one_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="12dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
