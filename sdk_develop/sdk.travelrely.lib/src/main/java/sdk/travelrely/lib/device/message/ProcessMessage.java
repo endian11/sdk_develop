@@ -1,15 +1,11 @@
 package sdk.travelrely.lib.device.message;
 
 import android.os.Message;
-import android.os.Messenger;
-import android.os.RemoteException;
 
-import java.util.Queue;
-import java.util.concurrent.SynchronousQueue;
-
+import sdk.travelrely.lib.TRAction;
 import sdk.travelrely.lib.device.manager.BoxManager;
 import sdk.travelrely.lib.util.ByteUtil;
-import sdk.travelrely.lib.util.LogUtil;
+import sdk.travelrely.lib.util.SharedUtil;
 
 /**
  * ＊ LvXin_V2
@@ -39,7 +35,7 @@ public class ProcessMessage {
         //TODO 解析信息
         Message parseMessage = BoxManager.getDefault().getHandler().obtainMessage();
         switch (BoxManager.CURRENT_ACTION) {
-            case BoxManager.ACTION_CHECK_KEY://检查key是否存在
+            case BoxManager.ACTION_ISHAVE_KEY://检查key是否存在
                 // true 存在  false不存在
                 if ((message[5] & 0xFF) == 0x01){
                     //有key  key存在
@@ -47,7 +43,7 @@ public class ProcessMessage {
                 }else{
                     parseMessage.obj = false;
                 }
-                dispatchAction(BoxManager.ACTION_CHECK_KEY,parseMessage);
+                dispatchAction(BoxManager.ACTION_ISHAVE_KEY,parseMessage);
                 break;
             case BoxManager.ACTION_READ_MAC://读mac地址
                 int id = 0;
@@ -66,6 +62,7 @@ public class ProcessMessage {
                     parseMessage.obj = true;//保存key成功
                 }else{
                     parseMessage.obj = false;
+                    SharedUtil.set(TRAction.SHARED_BT_KEY,"");//保存key失败，清掉原来保存的key
                 }
                 dispatchAction(BoxManager.ACTION_GEMERAT_KEY, parseMessage);
                 break;
@@ -96,6 +93,16 @@ public class ProcessMessage {
                 }
 
                 dispatchAction(BoxManager.ACTION_READ_POWER_LEVEL, parseMessage);
+                break;
+            case BoxManager.ACTION_CHECK_KEY:
+                int id2 = 0;
+                if (message!=null && message.length > 4){
+                    id = ByteUtil.getInt(message);
+                }
+                if ( id2== 0x83570F0F ){
+                    parseMessage.obj = true;
+                }
+                dispatchAction(BoxManager.ACTION_CHECK_KEY,parseMessage);
                 break;
         }
     }
