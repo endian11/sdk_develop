@@ -23,14 +23,14 @@ import com.travelrely.app.view.NavigationBar.OnNavigationBarClick;
 import com.travelrely.app.view.SysAlertDialog.OnSysAlertClickListener;
 import com.travelrely.app.view.SysAlertDialogChk.OnSysAlertChkClickListener;
 import com.travelrely.app.view.SysAlertDialogRsp.OnSysAlertRspClickListener;
-import com.travelrely.core.App;
-import com.travelrely.core.IAction;
-import com.travelrely.core.IntentMsg;
-import com.travelrely.core.nr.util.ActivityCollector;
+import com.travelrely.core.nrs.App;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.nrs.IntentMsg;
+import com.travelrely.core.nrs.nr.util.ActivityCollector;
+import com.travelrely.core.util.LogUtil;
+import com.travelrely.core.util.PreferencesUtil;
+import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.util.LogUtil;
-import com.travelrely.v2.util.PreferencesUtil;
-import com.travelrely.v2.util.Utils;
 
 public class NavigationActivity extends BaseActivity implements
         OnNavigationBarClick

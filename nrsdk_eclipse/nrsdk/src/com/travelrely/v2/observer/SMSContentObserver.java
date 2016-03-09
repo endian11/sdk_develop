@@ -1,12 +1,12 @@
 package com.travelrely.v2.observer;
 
+import com.travelrely.core.util.LOGManager;
+
 import android.content.Context;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Handler;
-
-import com.travelrely.v2.util.LOGManager;
 
 /** 
  * 

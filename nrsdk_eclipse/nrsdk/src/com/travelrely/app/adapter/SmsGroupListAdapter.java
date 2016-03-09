@@ -11,10 +11,10 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
+import com.travelrely.core.util.TimeUtil;
 import com.travelrely.sdk.R;
 import com.travelrely.v2.db.SmsEntityDBHelper;
 import com.travelrely.v2.model.SmsEntity;
-import com.travelrely.v2.util.TimeUtil;
 
 
 public class SmsGroupListAdapter extends NavigationBaseAdapter

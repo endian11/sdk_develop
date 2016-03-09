@@ -141,17 +141,21 @@ public class BLEUtil {
     }
 
     /**
+     *
+     * @param translateKey
      * @param key
+     * @param startPos
+     * @param length
      * @return
      */
-    public static byte[] getKeySaveReq(String key) {
+    public static byte[] getKeySaveReq(byte[] translateKey, String key, int startPos, int length) {
         if (TextUtils.isEmpty(key)) {
             LogUtil.e(TAG, "send key to box, but key is empty");
             return null;
         }
-        byte[] sendReq = new byte[Constant.keySaveReq.length];
-        System.arraycopy(Constant.keySaveReq, 0, sendReq, 0, Constant.keySaveReq.length);
-        System.arraycopy(key.getBytes(), 0, sendReq, 5, 6);
+        byte[] sendReq = new byte[translateKey.length];
+        System.arraycopy(translateKey, 0, sendReq, 0, translateKey.length);
+        System.arraycopy(key.getBytes(), 0, sendReq, startPos, length);
         return sendReq;
     }
 

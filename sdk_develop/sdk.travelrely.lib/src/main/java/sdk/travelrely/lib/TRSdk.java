@@ -12,6 +12,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 
 import sdk.travelrely.lib.config.SDKConfig;
+import sdk.travelrely.lib.device.exception.BLEException;
 import sdk.travelrely.lib.device.manager.BLEManager;
 import sdk.travelrely.lib.minterface.IDeviceface;
 import sdk.travelrely.lib.minterface.ITRCallback;
@@ -125,7 +126,11 @@ public class TRSdk implements IDeviceface {
     @Override
     public void startScan(ITRCallback callback) {
         if (mDevice == null) createDevice();
-        mDevice.startScan(callback);
+        try {
+            mDevice.startScan(callback);
+        } catch (BLEException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -141,7 +146,8 @@ public class TRSdk implements IDeviceface {
     }
 
     @Override
-    public void pairByUUID(String UUID) {
-
+    public Boolean pairByMacAddress(String macaddress) {
+        if(mDevice == null) createDevice();
+        return mDevice.pairByMacAddress(macaddress);
     }
 }

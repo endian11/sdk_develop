@@ -21,16 +21,16 @@ import android.widget.TextView;
 import com.travelrely.app.adapter.SmsChatListAdapter;
 import com.travelrely.app.view.PullDownListView;
 import com.travelrely.app.view.PullDownListView.OnRefreshListener;
-import com.travelrely.core.Engine;
-import com.travelrely.core.IAction;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.util.TimeUtil;
+import com.travelrely.core.util.Utils;
 import com.travelrely.model.ContactModel;
 import com.travelrely.model.ContactModel.TagNumber;
 import com.travelrely.sdk.R;
 import com.travelrely.v2.db.ContactDBHelper;
 import com.travelrely.v2.db.SmsEntityDBHelper;
 import com.travelrely.v2.model.SmsEntity;
-import com.travelrely.v2.util.TimeUtil;
-import com.travelrely.v2.util.Utils;
 
 /**
  * @author zhangyao

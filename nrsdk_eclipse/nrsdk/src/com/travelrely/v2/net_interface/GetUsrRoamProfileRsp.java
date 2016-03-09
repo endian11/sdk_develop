@@ -7,7 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.travelrely.net.response.ResponseInfo;
+import com.travelrely.core.glms.response.ResponseInfo;
 import com.travelrely.v2.model.UserRoamProfile;
 import com.travelrely.v2.response.BaseData;
 

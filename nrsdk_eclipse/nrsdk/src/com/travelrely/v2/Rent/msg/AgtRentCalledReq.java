@@ -1,6 +1,6 @@
 package com.travelrely.v2.Rent.msg;
 
-import com.travelrely.core.nr.util.ByteUtil;
+import com.travelrely.core.nrs.nr.util.ByteUtil;
 
 import android.text.TextUtils;
 

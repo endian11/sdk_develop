@@ -13,7 +13,7 @@ package org.webrtc.voiceengine;
 import java.nio.ByteBuffer;
 import java.util.concurrent.locks.ReentrantLock;
 
-import com.travelrely.v2.util.Utils;
+import com.travelrely.core.util.Utils;
 
 import android.content.Context;
 import android.media.AudioFormat;

@@ -1,8 +1,8 @@
 package com.travelrely.v2.Rent.msg;
 
-import com.travelrely.core.nr.msg.MsgId;
-import com.travelrely.core.nr.msg.OctArray28_s;
-import com.travelrely.core.nr.util.ByteUtil;
+import com.travelrely.core.nrs.nr.msg.MsgId;
+import com.travelrely.core.nrs.nr.msg.OctArray28_s;
+import com.travelrely.core.nrs.nr.util.ByteUtil;
 
 public class RentAgtByeInd
 {

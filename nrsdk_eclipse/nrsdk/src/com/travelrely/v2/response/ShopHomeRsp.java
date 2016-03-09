@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import org.json.JSONObject;
 
-import com.travelrely.net.response.ResponseInfo;
+import com.travelrely.core.glms.response.ResponseInfo;
 import com.travelrely.v2.response.TripInfo.Data;
 
 public class ShopHomeRsp extends BaseData{

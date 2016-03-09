@@ -6,7 +6,7 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.travelrely.core.Engine;
+import com.travelrely.core.nrs.Engine;
 import com.travelrely.v2.response.GetNewGroup;
 import com.travelrely.v2.response.GroupMsg;
 import com.travelrely.v2.response.GetNewGroup.Data;

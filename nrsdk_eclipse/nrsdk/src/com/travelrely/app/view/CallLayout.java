@@ -21,14 +21,14 @@ import android.widget.TextView;
 import com.travelrely.app.activity.ChatMsgListAct;
 import com.travelrely.app.view.SysAlertDialog.OnSysAlertClickListener;
 import com.travelrely.app.view.SysListAlert.OnListAlertClickListener;
-import com.travelrely.core.Constant;
-import com.travelrely.core.Engine;
-import com.travelrely.core.ReleaseConfig;
+import com.travelrely.core.nrs.Constant;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.ReleaseConfig;
+import com.travelrely.core.util.FileUtil;
+import com.travelrely.core.util.NetUtil;
+import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.Api;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.util.FileUtil;
-import com.travelrely.v2.util.NetUtil;
-import com.travelrely.v2.util.Utils;
 
 @SuppressWarnings("deprecation")
 public class CallLayout extends LinearLayout implements OnClickListener,

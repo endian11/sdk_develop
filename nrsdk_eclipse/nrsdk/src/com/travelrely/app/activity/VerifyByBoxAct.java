@@ -38,26 +38,26 @@ import android.widget.TextView;
 
 import com.travelrely.app.view.FormsFinishButton;
 import com.travelrely.app.view.ListViewForScrollView;
-import com.travelrely.core.ConstantValue;
-import com.travelrely.core.Engine;
-import com.travelrely.core.IAction;
-import com.travelrely.core.IntentMsg;
-import com.travelrely.core.Res;
-import com.travelrely.core.ble.BleMsgId;
-import com.travelrely.core.nr.BoxManager;
-import com.travelrely.core.nr.msg.MsgId;
-import com.travelrely.core.nr.util.ByteUtil;
-import com.travelrely.net.ProgressOverlay;
-import com.travelrely.net.ProgressOverlay.OnProgressEvent;
-import com.travelrely.net.response.ResponseInfo;
+import com.travelrely.core.glms.ProgressOverlay;
+import com.travelrely.core.glms.ProgressOverlay.OnProgressEvent;
+import com.travelrely.core.glms.response.ResponseInfo;
+import com.travelrely.core.nrs.ConstantValue;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.nrs.IntentMsg;
+import com.travelrely.core.nrs.Res;
+import com.travelrely.core.nrs.ble.BleMsgId;
+import com.travelrely.core.nrs.nr.BoxManager;
+import com.travelrely.core.nrs.nr.msg.MsgId;
+import com.travelrely.core.nrs.nr.util.ByteUtil;
+import com.travelrely.core.util.LogUtil;
+import com.travelrely.core.util.SpUtil;
+import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.Api;
 import com.travelrely.sdk.RequestResultListener;
 import com.travelrely.sdk.R;
 import com.travelrely.v2.net_interface.VerifySuccReq;
 import com.travelrely.v2.net_interface.VerifySuccRsp;
-import com.travelrely.v2.util.LogUtil;
-import com.travelrely.v2.util.SpUtil;
-import com.travelrely.v2.util.Utils;
 
 /**
  * 选择蓝牙盒子

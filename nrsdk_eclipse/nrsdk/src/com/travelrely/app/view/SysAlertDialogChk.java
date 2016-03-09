@@ -13,8 +13,8 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.travelrely.core.util.ViewUtil;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.util.ViewUtil;
 
 public class SysAlertDialogChk extends Dialog implements OnClickListener
 {

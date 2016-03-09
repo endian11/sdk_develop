@@ -24,9 +24,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.travelrely.app.view.MessageItem;
+import com.travelrely.core.util.LOGManager;
 import com.travelrely.sdk.R;
 import com.travelrely.v2.response.TraMessage;
-import com.travelrely.v2.util.LOGManager;
 
 public class MessageListViewAdapter extends BaseAdapter implements
         OnCompletionListener, SensorEventListener {

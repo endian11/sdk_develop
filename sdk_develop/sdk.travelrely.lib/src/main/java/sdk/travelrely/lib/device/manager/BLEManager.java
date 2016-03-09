@@ -227,6 +227,9 @@ public class BLEManager {
                 LogUtil.d(TAG, "send message " + ByteUtil.toHexString(message) + " faild...");
                 return false;
             }
+        }else{
+            LogUtil.d(TAG, "mCharacter setValue faild...");
+            return false;
         }
 
         return true;

@@ -29,14 +29,19 @@ import com.travelrely.app.view.NavigationBar.OnNavigationBarClick;
 import com.travelrely.app.view.SysAlertDialog.OnSysAlertClickListener;
 import com.travelrely.app.view.SysAlertDialogChk.OnSysAlertChkClickListener;
 import com.travelrely.app.activity.HomePageActivity;
-import com.travelrely.core.Engine;
-import com.travelrely.core.ReleaseConfig;
-import com.travelrely.core.Res;
+import com.travelrely.core.glms.ProgressOverlay;
+import com.travelrely.core.glms.ProgressOverlay.OnProgressEvent;
+import com.travelrely.core.glms.request.VerifyReq;
+import com.travelrely.core.glms.response.VerifyRsp;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.ReleaseConfig;
+import com.travelrely.core.nrs.Res;
+import com.travelrely.core.util.LOGManager;
+import com.travelrely.core.util.SpUtil;
+import com.travelrely.core.util.SysUtil;
+import com.travelrely.core.util.UrlUtil;
+import com.travelrely.core.util.Utils;
 import com.travelrely.model.CountrySelectModel;
-import com.travelrely.net.ProgressOverlay;
-import com.travelrely.net.ProgressOverlay.OnProgressEvent;
-import com.travelrely.net.request.VerifyReq;
-import com.travelrely.net.response.VerifyRsp;
 import com.travelrely.sdk.R;
 import com.travelrely.v2.db.GroupDBHelper;
 import com.travelrely.v2.net_interface.GetCommStatusRsp;
@@ -44,11 +49,6 @@ import com.travelrely.v2.net_interface.LoginRsp;
 import com.travelrely.v2.net_interface.TransferClientIdReq;
 import com.travelrely.v2.response.GetGroupList;
 import com.travelrely.v2.response.GroupList;
-import com.travelrely.v2.util.LOGManager;
-import com.travelrely.v2.util.SpUtil;
-import com.travelrely.v2.util.SysUtil;
-import com.travelrely.v2.util.UrlUtil;
-import com.travelrely.v2.util.Utils;
 
 /**
   * @ClassName: LoginActivity

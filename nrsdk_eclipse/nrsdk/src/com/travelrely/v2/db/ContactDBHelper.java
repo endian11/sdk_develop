@@ -14,14 +14,14 @@ import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.text.TextUtils;
 
-import com.travelrely.core.Engine;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.util.HanziToPinyin;
+import com.travelrely.core.util.LOGManager;
+import com.travelrely.core.util.Utils;
+import com.travelrely.core.util.HanziToPinyin.Token;
 import com.travelrely.model.ContactModel;
 import com.travelrely.model.ContactModel.TagNumber;
 import com.travelrely.v2.response.GetAppVersion;
-import com.travelrely.v2.util.HanziToPinyin;
-import com.travelrely.v2.util.HanziToPinyin.Token;
-import com.travelrely.v2.util.LOGManager;
-import com.travelrely.v2.util.Utils;
 
 /**
  * 1.负责将手机系统的通讯录及sim卡里的通讯录读取 <br>

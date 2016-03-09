@@ -18,15 +18,15 @@ import android.widget.TextView;
 import com.travelrely.app.view.CustomProgressDialog;
 import com.travelrely.app.view.SysAlertDialog;
 import com.travelrely.app.view.SysAlertDialog.OnSysAlertClickListener;
-import com.travelrely.core.App;
-import com.travelrely.core.Engine;
-import com.travelrely.core.IAction;
-import com.travelrely.core.IntentMsg;
-import com.travelrely.core.nr.util.ActivityCollector;
+import com.travelrely.core.nrs.App;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.nrs.IntentMsg;
+import com.travelrely.core.nrs.nr.util.ActivityCollector;
+import com.travelrely.core.util.LOGManager;
+import com.travelrely.core.util.LogUtil;
+import com.travelrely.core.util.UIHelper;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.util.LOGManager;
-import com.travelrely.v2.util.LogUtil;
-import com.travelrely.v2.util.UIHelper;
 
 public class ContactActivity extends FragmentActivity
 {

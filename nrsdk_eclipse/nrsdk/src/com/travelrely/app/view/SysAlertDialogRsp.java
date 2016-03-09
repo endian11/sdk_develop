@@ -12,8 +12,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.travelrely.core.util.ViewUtil;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.util.ViewUtil;
 
 public class SysAlertDialogRsp extends Dialog implements OnClickListener
 {

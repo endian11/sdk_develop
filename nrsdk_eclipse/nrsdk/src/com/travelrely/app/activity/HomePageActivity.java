@@ -20,21 +20,21 @@ import android.widget.ViewFlipper;
 
 import com.igexin.sdk.PushManager;
 import com.travelrely.app.activity.LoginActivity;
-import com.travelrely.core.Constant;
-import com.travelrely.core.ConstantValue;
-import com.travelrely.core.Engine;
-import com.travelrely.core.IAction;
 import com.travelrely.sdk.R;
 import com.travelrely.app.activity.MyActivity;
 import com.travelrely.app.view.SysAlertDialog;
 import com.travelrely.app.view.SysAlertDialog.OnSysAlertClickListener;
+import com.travelrely.core.nrs.Constant;
+import com.travelrely.core.nrs.ConstantValue;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.util.LogUtil;
+import com.travelrely.core.util.SpUtil;
+import com.travelrely.core.util.SysUtil;
 import com.travelrely.v2.db.SmsEntityDBHelper;
 import com.travelrely.v2.db.TravelrelyMessageDBHelper;
 import com.travelrely.v2.model.SmsEntity;
 import com.travelrely.v2.response.TraMessage;
-import com.travelrely.v2.util.LogUtil;
-import com.travelrely.v2.util.SpUtil;
-import com.travelrely.v2.util.SysUtil;
 
 /**
   * @ClassName: HomePageActivity

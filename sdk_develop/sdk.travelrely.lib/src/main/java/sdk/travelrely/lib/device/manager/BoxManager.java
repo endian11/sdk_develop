@@ -1,13 +1,12 @@
 package sdk.travelrely.lib.device.manager;
 
-import android.os.Handler;
-import android.os.Looper;
 import android.os.Message;
 
 import sdk.travelrely.lib.Constant;
 import sdk.travelrely.lib.TRAction;
 import sdk.travelrely.lib.device.exception.BLEException;
 import sdk.travelrely.lib.device.util.BLEUtil;
+import sdk.travelrely.lib.obersver.DeviceManagerObersver;
 import sdk.travelrely.lib.util.ByteUtil;
 import sdk.travelrely.lib.util.LogUtil;
 import sdk.travelrely.lib.util.SharedUtil;
@@ -19,7 +18,7 @@ import sdk.travelrely.lib.util.TextUtil;
  * ＊ sdk.travelrely.lib.device.manager
  * ＊ 16:02
  */
-public class BoxManager {
+public class BoxManager extends BaseManager {
 
     private static BoxManager manager = new BoxManager();
 
@@ -37,80 +36,75 @@ public class BoxManager {
 
     public static int CURRENT_ACTION = -1;
 
-    private Handler mHandler = new Handler(Looper.getMainLooper()) {
+    @Override
+    public void receiveMessage(Message message) {
+        super.receiveMessage(message);
+        switch (message.what) {
+            case ACTION_ISHAVE_KEY:
+                //TODO key检查结果，检查是否需要进行配对
+                boolean flag = (boolean) message.obj;
+                if (flag) {
+                    LogUtil.d("有key");//证明该盒子 已经跟别的手机配对过。
+                    SimManager.getDefault().readSimInfo();
+                } else {
+                    LogUtil.d("无key");
 
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            switch (msg.what) {
-                case ACTION_ISHAVE_KEY:
-                    //TODO key检查结果，检查是否需要进行配对
-                    boolean flag = (boolean)msg.obj;
-                    if (flag){
-                        LogUtil.d("有key");//证明该盒子 已经跟别的手机配对过。
-                    }else{
-                        LogUtil.d("无key");
-                        postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                readMacAddress();
-                            }
-                        },100);
+                    DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            readMacAddress();
+                        }
+                    }, 100);
+                }
+                break;
+            case ACTION_READ_MAC:
+                //TODO 读取MAC地址
+                byte[] mac = (byte[]) message.obj;
+                SharedUtil.set(TRAction.SHARED_BT_ADDR, ByteUtil.toMacAddr(mac));
+                LogUtil.d("mac addr: " + ByteUtil.toMacAddr(mac));
+                DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        generateKey();
                     }
-                    break;
-                case ACTION_READ_MAC:
-                    //TODO 读取MAC地址
-                    byte[] mac = (byte[])msg.obj;
-                    SharedUtil.set(TRAction.SHARED_BT_ADDR,ByteUtil.toMacAddr(mac));
-                    LogUtil.d("mac addr: " + ByteUtil.toMacAddr(mac));
-                    postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            generateKey();
-                        }
-                    }, 100);
-                    break;
-                case ACTION_GEMERAT_KEY:
-                    //TODO 保存key成功
+                }, 100);
+                break;
+            case ACTION_GEMERAT_KEY:
+                //TODO 保存key成功
 
-                    postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            readCosVersion();
-                        }
-                    }, 100);
-                    break;
-                case ACTION_READ_COS_VERSION:
+                DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        readCosVersion();
+                    }
+                }, 100);
+                break;
+            case ACTION_READ_COS_VERSION:
 
-                    postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            readMtSN();
-                        }
-                    }, 100);
-                    break;
-                case ACTION_READ_MT_SN:
+                DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        readMtSN();
+                    }
+                }, 100);
+                break;
+            case ACTION_READ_MT_SN:
 
-                    postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            readPowerLevel();
-                        }
-                    }, 100);
-                    break;
-                case ACTION_READ_POWER_LEVEL:
-
-                    break;
-            }
+                DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        readPowerLevel();
+                    }
+                }, 100);
+                break;
+            case ACTION_READ_POWER_LEVEL:
+                SimManager.getDefault().readSimInfo();
+                break;
         }
-    };
-
-    public Handler getHandler() {
-        return mHandler;
     }
 
     private BoxManager() {
-
+        super();
     }
 
     public static BoxManager getDefault() {
@@ -145,12 +139,12 @@ public class BoxManager {
         LogUtil.d("send generateKey cmd");
         String key = TextUtil.getRandomString(6);
         SharedUtil.set(TRAction.SHARED_BT_KEY, key);//保存key
-        byte[] sendReq = BLEUtil.getKeySaveReq(key);
+        byte[] sendReq = BLEUtil.getKeySaveReq(Constant.keySaveReq, key, 5, 6);
         try {
             BLEManager.getDefault().send(sendReq);
         } catch (BLEException e) {
             e.printStackTrace();
-        } 
+        }
 
     }
 
@@ -204,20 +198,7 @@ public class BoxManager {
     }
 
     /**
-     * 校验key
-     */
-    public void sendChkKey(){
-        CURRENT_ACTION = ACTION_CHECK_KEY;
-        try {
-            BLEManager.getDefault().send(Constant.keyChkReq);
-        } catch (BLEException e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
      * 检测是否已经配对过
-     *
      */
     private void CheckPair() {
         CURRENT_ACTION = ACTION_ISHAVE_KEY;
@@ -228,7 +209,22 @@ public class BoxManager {
         }
     }
 
-
+    /**
+     * 校验key
+     */
+    public void sendChkKey() {
+        LogUtil.d("send sendChkKey cmd");
+        BoxManager.CURRENT_ACTION = BoxManager.ACTION_CHECK_KEY;
+        try {
+            String key = SharedUtil.get(TRAction.SHARED_BT_KEY, "");
+            byte[] sendReq = BLEUtil.getKeySaveReq(Constant.keyChkReq, key, 5, 6);
+            if (sendReq != null) {
+                BLEManager.getDefault().send(sendReq);
+            }
+        } catch (BLEException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }

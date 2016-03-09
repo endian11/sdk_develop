@@ -7,9 +7,9 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.travelrely.core.glms.response.BaseResponse;
+import com.travelrely.core.glms.response.ResponseInfo;
 import com.travelrely.model.Adv;
-import com.travelrely.net.response.BaseResponse;
-import com.travelrely.net.response.ResponseInfo;
 import com.travelrely.v2.response.BaseData;
 
 public class GetAdvRsp extends BaseResponse implements Serializable

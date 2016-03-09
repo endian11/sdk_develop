@@ -1,10 +1,10 @@
 package com.travelrely.v2.db;
 
+import com.travelrely.core.util.LOGManager;
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.travelrely.v2.util.LOGManager;
 
 public class ComDBOpenHelper extends SQLiteOpenHelper
 {

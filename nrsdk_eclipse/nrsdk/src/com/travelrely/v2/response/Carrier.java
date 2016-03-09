@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 import org.json.JSONObject;
 
-import com.travelrely.net.response.BaseResponse;
+import com.travelrely.core.glms.response.BaseResponse;
 
 public class Carrier extends BaseResponse implements Serializable {
 

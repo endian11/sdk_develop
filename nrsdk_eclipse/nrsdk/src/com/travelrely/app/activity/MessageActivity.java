@@ -31,21 +31,21 @@ import com.travelrely.app.view.DialogManager;
 import com.travelrely.app.view.NavigationBar;
 import com.travelrely.app.view.SwipeListView;
 import com.travelrely.app.view.NavigationBar.OnNavigationBarClick;
-import com.travelrely.core.Constant;
-import com.travelrely.core.Engine;
-import com.travelrely.core.IAction;
+import com.travelrely.core.glms.GetMsg.FetchMessage;
+import com.travelrely.core.nrs.Constant;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.util.AESUtils;
+import com.travelrely.core.util.FileUtil;
+import com.travelrely.core.util.SpUtil;
+import com.travelrely.core.util.Utils;
 import com.travelrely.model.ContactModel;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.GetMsg.FetchMessage;
 import com.travelrely.v2.db.ContactDBHelper;
 import com.travelrely.v2.db.SmsEntityDBHelper;
 import com.travelrely.v2.db.TravelrelyMessageDBHelper;
 import com.travelrely.v2.model.SmsEntity;
 import com.travelrely.v2.response.TraMessage;
-import com.travelrely.v2.util.AESUtils;
-import com.travelrely.v2.util.FileUtil;
-import com.travelrely.v2.util.SpUtil;
-import com.travelrely.v2.util.Utils;
 
 public class MessageActivity extends NavigationActivity implements
         OnItemClickListener, OnNavigationBarClick, OnClickListener,

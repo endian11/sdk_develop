@@ -11,12 +11,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.travelrely.core.Engine;
-import com.travelrely.core.IAction;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.util.LOGManager;
 import com.travelrely.sdk.R;
 import com.travelrely.v2.model.Cart;
 import com.travelrely.v2.model.Commodity;
-import com.travelrely.v2.util.LOGManager;
 
 public class SystemDialog extends Activity implements OnClickListener
 {
