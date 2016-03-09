@@ -29,19 +29,24 @@ public class TRDevice implements IDeviceface {
     /**
      * 清除回调函数
      */
-    public void clearDeviceCallback() {
+    private void clearDeviceCallback() {
         mCallback = null;
     }
 
     /**
      * 释放占用的资源
      */
-    public void release() {
+    private void release() {
         clearDeviceCallback();
     }
 
+    /**
+     * 开始搜索蓝牙设备
+     * @param callback
+     */
     @Override
     public void startScan(@NonNull ITRCallback callback) {
+
         if (scan != null) {
             if (scan.isSearching()) {
                 if(mCallback!=null)
@@ -64,7 +69,6 @@ public class TRDevice implements IDeviceface {
     public Boolean pairByDevice(@NonNull BluetoothDevice device) {
         //TODO
         stopScan();
-
         BLEManager.getDefault().connect(device.getAddress());
         return true;
     }
@@ -86,6 +90,8 @@ public class TRDevice implements IDeviceface {
             scan.stopScan();
             scan = null;
         }
+
+        release();
     }
 
 }

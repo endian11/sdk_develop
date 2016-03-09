@@ -27,18 +27,31 @@ import sdk.travelrely.lib.util.ToastUtil;
  * ＊ LvXin_V2
  * Created by weihaichao on 16/3/5.
  * ＊ com.travelrely.v2
- *
+ * <p/>
  * 126邮箱 POP3服务器:pop.126.com    SMTP服务器:smtp.126.com
  * 163邮箱 POP3服务器:pop.163.com    SMTP服务器:smtp.163.com
  * yahoo邮箱 POP3服务器：pop.mail.yahoo.com.cn SMTP服务器：smtp.mail.yahoo.com.cn
  * Sohu邮箱 POP3服务器：pop3.sohu.com  SMTP服务器：smtp.sohu.com
  * Gmail邮箱  POP3服务器是pop.gmail.com SMTP服务器是smtp.gmail.com
  * Q邮箱      POP3服务器：pop.qq.com SMTP服务器：smtp.qq.com
- *
+ * <p/>
  * ＊ 17:20
  */
 
 public class MailUtil {
+
+    public static final String MAIL_126_POP3 = "pop.126.com";
+    public static final String MAIL_126_SMTP = "smtp.126.com";
+    public static final String MAIL_163_POP3 = "pop.163.com";
+    public static final String MAIL_163_SMTP = "smtp.163.com";
+    public static final String MAIL_YAHOO_POP3 = "pop.mail.yahoo.com.cn";
+    public static final String MAIL_YAHOO_SMTP = "smtp.mail.yahoo.com.cn";
+    public static final String MAIL_SOHU_POP3 = "pop3.sohu.com";
+    public static final String MAIL_SOHU_SMTP = "smtp.sohu.com";
+    public static final String MAIL_GMAIL_POP3 = "pop.gmail.com";
+    public static final String MAIL_GMAIL_SMTP = "smtp.gmail.com";
+    public static final String MAIL_QQ_POP3 = "pop.qq.com";
+    public static final String MAIL_QQ_SMTP = "smtp.qq.com";
 
     private int port = 25;  //smtp协议使用的是25号端口
     private String server; // 发件人邮件服务器
@@ -53,9 +66,11 @@ public class MailUtil {
         this.server = server;
     }
 
-    public interface SendResult{
+    public interface SendResult {
         void success();
+
         void faild();
+
         void start();
     }
 
@@ -65,8 +80,8 @@ public class MailUtil {
      * body 正文内容
      * paths  发送的附件路径集合
      **/
-    public void sendEmail(String email, String subject, String body,SendResult result) {
-        if(result != null) result.start();
+    public void sendEmail(String email, String subject, String body, SendResult result) {
+        if (result != null) result.start();
         Properties props = new Properties();
         props.put("mail.smtp.host", server);
         props.put("mail.smtp.port", String.valueOf(port));
@@ -94,13 +109,13 @@ public class MailUtil {
             transport.sendMessage(msg, msg.getAllRecipients());  //发送邮件
             transport.close();
 
-            if(result != null) result.success();
+            if (result != null) result.success();
         } catch (NoSuchProviderException e) {
             e.printStackTrace();
-            if(result != null) result.faild();
+            if (result != null) result.faild();
         } catch (MessagingException e) {
             e.printStackTrace();
-            if(result != null) result.faild();
+            if (result != null) result.faild();
         }
     }
 }

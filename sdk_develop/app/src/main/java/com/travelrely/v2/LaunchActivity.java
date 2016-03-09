@@ -3,14 +3,9 @@ package com.travelrely.v2;
 import android.Manifest;
 import android.app.Activity;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothGattService;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Looper;
-import android.support.v4.content.LocalBroadcastManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,16 +16,13 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.travelrely.sdk.R;
+
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
-import sdk.travelrely.lib.TRAction;
-import sdk.travelrely.lib.TRDevice;
 import sdk.travelrely.lib.TRSdk;
-import sdk.travelrely.lib.device.manager.BLEManager;
 import sdk.travelrely.lib.minterface.ITRCallback;
-import sdk.travelrely.lib.util.AndroidUtil;
 import sdk.travelrely.lib.util.LogUtil;
 import sdk.travelrely.lib.util.ToastUtil;
 
@@ -47,12 +39,19 @@ public class LaunchActivity extends Activity implements ITRCallback, View.OnClic
 
         PackageManager manager = getPackageManager();
         int type = manager.checkPermission(Manifest.permission.ACCESS_WIFI_STATE, getPackageName());
-        if(type == PackageManager.PERMISSION_GRANTED) {
+        if (type == PackageManager.PERMISSION_GRANTED) {
             LogUtil.d("check permission access_wifi ->" + type);
-        }else{
+        } else {
             LogUtil.d("check permission not allowed access_wifi ->" + type);
         }
 
+        initUI();
+    }
+
+    /**
+     * 初始化UI
+     */
+    private void initUI() {
         findViewById(R.id.stopBle).setOnClickListener(this);
         findViewById(R.id.startBle).setOnClickListener(this);
         findViewById(R.id.emailto).setOnClickListener(this);
@@ -69,11 +68,9 @@ public class LaunchActivity extends Activity implements ITRCallback, View.OnClic
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 BluetoothDevice device = (BluetoothDevice) adapter.getItem(position);
-                TRSdk.getInstance().getDevice().pairByDevice(device);
+                TRSdk.getInstance().pairByDevice(device);
             }
         });
-
-
 
         LogUtil.setLogCallback(new LogUtil.LogCallback() {
             @Override
@@ -190,24 +187,17 @@ public class LaunchActivity extends Activity implements ITRCallback, View.OnClic
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.stopBle:
-                TRSdk.getInstance().getDevice().stopScan();
-                TRSdk.getInstance().getDevice().release();
+                TRSdk.getInstance().stopScan();
                 break;
             case R.id.startBle:
                 if (adapter != null) {
                     adapter.clear();
                 }
-                TRSdk.getInstance().getDevice().startScan(LaunchActivity.this);
+                TRSdk.getInstance().startScan(LaunchActivity.this);
                 break;
             case R.id.emailto:
                 //AndroidUtil.openSystemSetting(AndroidUtil.ACTION_SOUND_SETTINGS, this);
                 try {
-//                    Intent data = new Intent(Intent.ACTION_SENDTO);
-//                    data.setData(Uri.parse("mailto:135235621@qq.com"));
-//                    data.putExtra(Intent.EXTRA_SUBJECT, "log");
-//                    String content = ((TextView) findViewById(R.id.logtext)).getText().toString();
-//                    data.putExtra(Intent.EXTRA_TEXT, content);
-//                    startActivity(data);
                     new Thread(new Runnable() {
                         @Override
                         public void run() {

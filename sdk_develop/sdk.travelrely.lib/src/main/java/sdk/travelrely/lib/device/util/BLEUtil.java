@@ -26,7 +26,7 @@ public class BLEUtil {
 
     private static String TAG = BLEUtil.class.getSimpleName();
 
-    private static HashMap<Integer, String> serviceTypes = new HashMap();
+    private static HashMap<Integer, String> serviceTypes = new HashMap<>();
 
     static {
         // Sample Services.
@@ -40,7 +40,7 @@ public class BLEUtil {
 
 
     //-------------------------------------------
-    private static HashMap<Integer, String> charPermissions = new HashMap();
+    private static HashMap<Integer, String> charPermissions = new HashMap<>();
 
     static {
         charPermissions.put(0, "UNKNOW");
@@ -59,7 +59,7 @@ public class BLEUtil {
     }
 
     //-------------------------------------------
-    private static HashMap<Integer, String> charProperties = new HashMap();
+    private static HashMap<Integer, String> charProperties = new HashMap<>();
 
     static {
 
@@ -78,7 +78,7 @@ public class BLEUtil {
     }
 
     //--------------------------------------------------------------------------
-    private static HashMap<Integer, String> descPermissions = new HashMap();
+    private static HashMap<Integer, String> descPermissions = new HashMap<>();
 
     static {
         descPermissions.put(0, "UNKNOW");
@@ -96,7 +96,7 @@ public class BLEUtil {
         return getHashMapValue(descPermissions, property);
     }
 
-    //这段代码没看明白，欢迎大神指教
+
     private static String getHashMapValue(HashMap<Integer, String> hashMap, int number) {
         String result = hashMap.get(number);
         if (TextUtils.isEmpty(result)) {
@@ -129,8 +129,8 @@ public class BLEUtil {
         if (src == null || src.length <= 0) {
             return null;
         }
-        for (int i = 0; i < src.length; i++) {
-            int v = src[i] & 0xFF;
+        for (byte result : src) {
+            int v = result & 0xFF;
             String hv = Integer.toHexString(v);
             if (hv.length() < 2) {
                 stringBuilder.append(0);
