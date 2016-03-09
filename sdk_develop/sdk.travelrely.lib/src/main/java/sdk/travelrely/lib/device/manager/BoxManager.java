@@ -4,6 +4,7 @@ import android.os.Message;
 
 import sdk.travelrely.lib.Constant;
 import sdk.travelrely.lib.TRAction;
+import sdk.travelrely.lib.device.BLE;
 import sdk.travelrely.lib.device.exception.BLEException;
 import sdk.travelrely.lib.device.util.BLEUtil;
 import sdk.travelrely.lib.obersver.DeviceManagerObersver;
@@ -22,25 +23,11 @@ public class BoxManager extends BaseManager {
 
     private static BoxManager manager = new BoxManager();
 
-    /**
-     * ProcessMessage 中处理该处蓝牙设备返回结果数据
-     * 判断执行下一步所要执行的事件
-     */
-    public static final int ACTION_READ_MAC = 0;
-    public static final int ACTION_GEMERAT_KEY = 1;
-    public static final int ACTION_READ_COS_VERSION = 2;
-    public static final int ACTION_READ_MT_SN = 3;
-    public static final int ACTION_READ_POWER_LEVEL = 4;
-    public static final int ACTION_ISHAVE_KEY = 5;
-    public static final int ACTION_CHECK_KEY = 6;
-
-    public static int CURRENT_ACTION = -1;
-
     @Override
     public void receiveMessage(Message message) {
         super.receiveMessage(message);
         switch (message.what) {
-            case ACTION_ISHAVE_KEY:
+            case BLE.ACTION_ISHAVE_KEY:
                 //TODO key检查结果，检查是否需要进行配对
                 boolean flag = (boolean) message.obj;
                 if (flag) {
@@ -54,7 +41,6 @@ public class BoxManager extends BaseManager {
 
                 } else {
                     LogUtil.d("无key");
-
                     DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -63,7 +49,7 @@ public class BoxManager extends BaseManager {
                     }, 100);
                 }
                 break;
-            case ACTION_READ_MAC:
+            case BLE.ACTION_READ_MAC:
                 //TODO 读取MAC地址
                 byte[] mac = (byte[]) message.obj;
                 SharedUtil.set(TRAction.SHARED_BT_ADDR, ByteUtil.toMacAddr(mac));
@@ -75,7 +61,7 @@ public class BoxManager extends BaseManager {
                     }
                 }, 100);
                 break;
-            case ACTION_GEMERAT_KEY:
+            case BLE.ACTION_GEMERAT_KEY:
                 //TODO 保存key成功
 
                 DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
@@ -85,7 +71,7 @@ public class BoxManager extends BaseManager {
                     }
                 }, 100);
                 break;
-            case ACTION_READ_COS_VERSION:
+            case BLE.ACTION_READ_COS_VERSION:
 
                 DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
                     @Override
@@ -94,7 +80,7 @@ public class BoxManager extends BaseManager {
                     }
                 }, 100);
                 break;
-            case ACTION_READ_MT_SN:
+            case BLE.ACTION_READ_MT_SN:
 
                 DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
                     @Override
@@ -103,7 +89,7 @@ public class BoxManager extends BaseManager {
                     }
                 }, 100);
                 break;
-            case ACTION_READ_POWER_LEVEL:
+            case BLE.ACTION_READ_POWER_LEVEL:
                 DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -134,7 +120,7 @@ public class BoxManager extends BaseManager {
      * 读取MAC地址
      */
     private void readMacAddress() {
-        CURRENT_ACTION = ACTION_READ_MAC;
+        BLE.CURRENT_ACTION = BLE.ACTION_READ_MAC;
         LogUtil.d("send readMacAddress cmd");
         try {
             BLEManager.getDefault().send(Constant.macAddress);
@@ -147,7 +133,7 @@ public class BoxManager extends BaseManager {
      * 生成key 发送保存key命令
      */
     private void generateKey() {
-        CURRENT_ACTION = ACTION_GEMERAT_KEY;
+        BLE.CURRENT_ACTION = BLE.ACTION_GEMERAT_KEY;
         LogUtil.d("send generateKey cmd");
         String key = TextUtil.getRandomString(6);
         SharedUtil.set(TRAction.SHARED_BT_KEY, key);//保存key
@@ -164,7 +150,7 @@ public class BoxManager extends BaseManager {
      * 读COS版本号
      */
     private void readCosVersion() {
-        CURRENT_ACTION = ACTION_READ_COS_VERSION;
+        BLE.CURRENT_ACTION = BLE.ACTION_READ_COS_VERSION;
         LogUtil.d("send readCosVersion cmd");
         try {
             BLEManager.getDefault().send(Constant.CosVerReq);
@@ -177,7 +163,7 @@ public class BoxManager extends BaseManager {
      * 读取MT100序列号
      */
     private void readMtSN() {
-        CURRENT_ACTION = ACTION_READ_MT_SN;
+        BLE.CURRENT_ACTION = BLE.ACTION_READ_MT_SN;
         LogUtil.d("send readMtSN cmd");
 
         try {
@@ -191,7 +177,7 @@ public class BoxManager extends BaseManager {
      * 读取电量
      */
     public void readPowerLevel() {
-        CURRENT_ACTION = ACTION_READ_POWER_LEVEL;
+        BLE.CURRENT_ACTION = BLE.ACTION_READ_POWER_LEVEL;
         LogUtil.d("send readPowerLevel cmd");
         try {
             BLEManager.getDefault().send(Constant.BatteryQueryReq);
@@ -213,7 +199,7 @@ public class BoxManager extends BaseManager {
      * 检测是否已经配对过
      */
     private void CheckPair() {
-        CURRENT_ACTION = ACTION_ISHAVE_KEY;
+        BLE.CURRENT_ACTION = BLE.ACTION_ISHAVE_KEY;
         try {
             BLEManager.getDefault().send(Constant.keyStateReq);
         } catch (BLEException e) {
@@ -226,7 +212,7 @@ public class BoxManager extends BaseManager {
      */
     public void sendChkKey() {
         LogUtil.d("send sendChkKey cmd");
-        BoxManager.CURRENT_ACTION = BoxManager.ACTION_CHECK_KEY;
+        BLE.CURRENT_ACTION = BLE.ACTION_CHECK_KEY;
         try {
             String key = SharedUtil.get(TRAction.SHARED_BT_KEY, "");
             byte[] sendReq = BLEUtil.getKeySaveReq(Constant.keyChkReq, key, 5, 6);
