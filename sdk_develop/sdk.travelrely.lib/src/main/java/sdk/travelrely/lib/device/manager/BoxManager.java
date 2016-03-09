@@ -45,7 +45,13 @@ public class BoxManager extends BaseManager {
                 boolean flag = (boolean) message.obj;
                 if (flag) {
                     LogUtil.d("有key");//证明该盒子 已经跟别的手机配对过。
-                    SimManager.getDefault().readSimInfo();
+                    DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            SimManager.getDefault().readSimInfo();
+                        }
+                    }, 100);
+
                 } else {
                     LogUtil.d("无key");
 
@@ -98,7 +104,13 @@ public class BoxManager extends BaseManager {
                 }, 100);
                 break;
             case ACTION_READ_POWER_LEVEL:
-                SimManager.getDefault().readSimInfo();
+                DeviceManagerObersver.get().getHandler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        SimManager.getDefault().readSimInfo();
+                    }
+                }, 100);
+
                 break;
         }
     }
