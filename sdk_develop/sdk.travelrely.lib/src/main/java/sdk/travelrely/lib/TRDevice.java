@@ -27,15 +27,6 @@ public class TRDevice implements IDeviceface {
     }
 
     /**
-     * 设置事件回调
-     *
-     * @param callback
-     */
-    public void setDeviceCallback(ITRCallback callback) {
-        mCallback = callback;
-    }
-
-    /**
      * 清除回调函数
      */
     public void clearDeviceCallback() {
@@ -49,28 +40,6 @@ public class TRDevice implements IDeviceface {
         clearDeviceCallback();
     }
 
-    /**
-     * search the bluetooth box
-     * 开始搜索蓝牙盒子
-     */
-    @Override
-    public void startScan() {
-        //TODO
-        if (scan != null) {
-            if (scan.isSearching()) {
-                return;
-            } else {
-                scan = null;
-            }
-        }
-        if (mCallback == null) return;
-        LogUtil.d("开始执行搜索蓝牙盒子");
-        scan = new BlueToothScan(mCallback);
-        scan.start();
-
-    }
-
-
     @Override
     public void startScan(@NonNull ITRCallback callback) {
         if (scan != null) {
@@ -82,7 +51,6 @@ public class TRDevice implements IDeviceface {
                 scan = null;
             }
         }
-
 
         mCallback = callback;
         scan = new BlueToothScan(mCallback);

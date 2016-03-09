@@ -9,7 +9,6 @@ import android.bluetooth.BluetoothDevice;
  * ＊ 09:59
  */
 public interface IDeviceface {
-    void startScan();
     void startScan(ITRCallback callback);
     void stopScan();
     Boolean pairByDevice(BluetoothDevice device);

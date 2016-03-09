@@ -53,25 +53,25 @@ public class BLEManager {
         return isConnect;
     }
 
+
     public void setConnect(Boolean connnect) {
         isConnect = connnect;
-        if (!connnect)
-            close();
+        if (!connnect) {
+            release();
+        }
     }
 
-    /**
-     * 关闭连接
-     */
-    private void close() {
-        LogUtil.d(TAG, "BLEManager.close");
-        if (mGatt != null) {
-            LogUtil.d(TAG, "mBluetoothGatt.disconnect : " + currentMac);
-            try {
-                mGatt.close();
-            } catch (NullPointerException e) {
-                e.printStackTrace();
-            }
+    public void release() {
+        LogUtil.d("BLEManager do release");
+        if(mGatt != null){
+            mGatt.close();
         }
+
+        if (mHandler != null) {
+            LogUtil.d("BluetoothGatt handler is clear");
+            mHandler.removeCallbacksAndMessages(null);
+        }
+
         mGatt = null;
         mCharacter = null;
     }
@@ -79,6 +79,11 @@ public class BLEManager {
     public BluetoothGatt getBluetoothGatt() {
         return mGatt;
     }
+
+    public void setBluetoothGatt(BluetoothGatt value) {
+        mGatt = value;
+    }
+
 
     public BluetoothGattCharacteristic getmCharacter() {
         return mCharacter;
@@ -95,16 +100,16 @@ public class BLEManager {
      * @return 是否成功
      */
     public Boolean connect(final String address) {
-        if (address.equals(currentMac) && isConnect() && mGatt != null) {
+        if (currentMac != null && address.equals(currentMac) && isConnect() && mGatt != null) {
             LogUtil.d(address + " is connected ! refused it");
             return false;
         }
 
-        LogUtil.d("开始执行连接蓝牙盒子");
-
         if (isConnect()) {
             disconnect();
         }
+
+        currentMac = address;
 
         final BluetoothDevice device = TRSdk.getInstance().getBlueAdapter().getRemoteDevice(address);
 
@@ -113,21 +118,22 @@ public class BLEManager {
             return false;
         }
 
-        currentMac = address;
+
+        LogUtil.d("开始执行连接蓝牙盒子");
 
         if (android.os.Build.FINGERPRINT.contains(" Meizu/meizu_m2cnote")) {
             //魅蓝note2
-            mGatt = device.connectGatt(TRSdk.getInstance().getContext(), true, BleDeviceGattCallback.getDefault());
+           device.connectGatt(TRSdk.getInstance().getContext(), true, BleDeviceGattCallback.getDefault());
         } else if (android.os.Build.FINGERPRINT.contains(" Xiaomi/cancro")) {
             //MI 3C
-            mGatt = device.connectGatt(TRSdk.getInstance().getContext(), true, BleDeviceGattCallback.getDefault());
+            device.connectGatt(TRSdk.getInstance().getContext(), true, BleDeviceGattCallback.getDefault());
         } else {
-            mHandler.postDelayed(new Runnable() {
+            mHandler.post(new Runnable() {
                 @Override
                 public void run() {
-                    mGatt = device.connectGatt(TRSdk.getInstance().getContext(), false, BleDeviceGattCallback.getDefault());
+                    device.connectGatt(TRSdk.getInstance().getContext(), false, BleDeviceGattCallback.getDefault());
                 }
-            }, 100);
+            });
         }
 
         LogUtil.i(TAG, "Trying to create a new connection : " + address);
@@ -139,18 +145,26 @@ public class BLEManager {
      * 连接失败
      */
     public void ConnectFaild() {
-        if (retry < 2) {
-            retry += 1;
-            if (currentMac != null && !currentMac.equals("")) {
-                LogUtil.d("reconnect " + retry + " ! current mac address is " + currentMac);
-                connect(currentMac);
-            } else {
-                LogUtil.d("reconnect faild ! current mac address is null or empty");
+        setConnect(false);
+
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (retry < 2) {
+                    retry += 1;
+                    if (currentMac != null && !currentMac.equals("")) {
+                        LogUtil.d("reconnect " + retry + " ! current mac address is " + currentMac);
+                        connect(currentMac);
+                    } else {
+                        LogUtil.d("reconnect faild ! current mac address is null or empty");
+                    }
+                } else {
+                    retry = 0;
+                    LogUtil.d("reconnect for 3 times complete , faild");
+                }
             }
-        } else {
-            retry = 0;
-            LogUtil.d("reconnect for 3 times complete , faild");
-        }
+        }, 200);
+
     }
 
     /**
@@ -158,6 +172,7 @@ public class BLEManager {
      */
     public void disconnect() {
         //LogUtil.i(1, "AtoB002");
+        LogUtil.d("BLEManager connection is disconnect");
         setConnect(false);
     }
 
@@ -166,7 +181,10 @@ public class BLEManager {
      */
     public void discoverServices() {
         LogUtil.i(TAG, "mGatt->:" + mGatt);
-        if (mGatt == null) return;
+        if (mGatt == null) {
+            return;
+        }
+        ;
         // Attempts to discover services after successful connection.
         boolean rslt = mGatt.discoverServices();
         LogUtil.i(TAG, "Attempting to start service discovery:" + rslt);

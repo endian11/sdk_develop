@@ -39,27 +39,32 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
 
         LogUtil.d(TAG, "onConnectionStateChange : status:" + status + "   newState:" + newState);
 
-        //TODO 连接状态发生改变
-        if (status != BluetoothGatt.GATT_SUCCESS) {
-            BLEManager.getDefault().setConnect(false);
-            BLEManager.getDefault().ConnectFaild();
-            return;
-        } else if (newState == BluetoothProfile.STATE_CONNECTED) {
+        //TODO GATT执行失败
+//        if (status != BluetoothGatt) {
+//            BLEManager.getDefault().setConnect(false);
+//            BLEManager.getDefault().ConnectFaild();
+//            return;
+//        }
+
+        if (newState == BluetoothProfile.STATE_CONNECTED) {
             //TODO 连接成功
             BLEManager.getDefault().setConnect(true);
+            BLEManager.getDefault().setBluetoothGatt(gatt);
             LogUtil.d("BluetoothGatt is connect success");
             BLEManager.getDefault().discoverServices();
         } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
             //TODO 连接断开
-            BLEManager.getDefault().setConnect(false);
             LogUtil.d("BluetoothGatt is disconnect");
+            BLEManager.getDefault().setConnect(false);
         }
+
+
     }
 
     @Override
     public void onServicesDiscovered(BluetoothGatt gatt, int status) {
         super.onServicesDiscovered(gatt, status);
-        LogUtil.d("BluetoothGatt ->" + status);
+        LogUtil.d("BluetoothGatt -> status " + status);
         if (gatt == null) {
             LogUtil.d("gatt is null");
             return;
@@ -130,7 +135,7 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
 
                         //TODO 执行其它
                         LogUtil.d("BluetoothGatt send order");
-                        BoxManager.getDefaultBoxManager().CheckTask();
+                        BoxManager.getDefault().CheckTask();
                     }
                 }
             }
@@ -155,15 +160,18 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
     @Override
     public void onCharacteristicWrite(BluetoothGatt gatt,
                                       BluetoothGattCharacteristic characteristic, int status) {
-        if (status == BluetoothGatt.GATT_SUCCESS) {
-            LogUtil.i(TAG, "BT TX succ：" + ByteUtil.toHexString(
-                    characteristic.getValue()));
-            //TODO 发送成功
 
-            return;
+        switch (status) {
+            case BluetoothGatt.GATT_SUCCESS:
+                LogUtil.d(TAG, "BT TX succ：" + ByteUtil.toHexString(
+                        characteristic.getValue()));
+                break;// 写入成功
+            case BluetoothGatt.GATT_FAILURE:
+                LogUtil.d(TAG, "写入失败");
+                break;// 写入失败
+            case BluetoothGatt.GATT_WRITE_NOT_PERMITTED:
+                LogUtil.d(TAG, "没有写入的权限");
+                break;// 没有写入的权限
         }
-        LogUtil.e(TAG, "BT TX fail:" + ByteUtil.toHexString(
-                characteristic.getValue()));
-        //TODO 发送失败
     }
 }
