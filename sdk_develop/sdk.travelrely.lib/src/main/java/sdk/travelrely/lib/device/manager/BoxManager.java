@@ -3,14 +3,14 @@ package sdk.travelrely.lib.device.manager;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.os.Messenger;
 
 import sdk.travelrely.lib.Constant;
-import sdk.travelrely.lib.TRSdk;
+import sdk.travelrely.lib.TRAction;
 import sdk.travelrely.lib.device.exception.BLEException;
 import sdk.travelrely.lib.device.util.BLEUtil;
 import sdk.travelrely.lib.util.ByteUtil;
 import sdk.travelrely.lib.util.LogUtil;
+import sdk.travelrely.lib.util.SharedUtil;
 import sdk.travelrely.lib.util.TextUtil;
 
 /**
@@ -27,13 +27,13 @@ public class BoxManager {
      * ProcessMessage 中处理该处蓝牙设备返回结果数据
      * 判断执行下一步所要执行的事件
      */
-
-    public static final int ACTION_CHECK_KEY = 5;
     public static final int ACTION_READ_MAC = 0;
     public static final int ACTION_GEMERAT_KEY = 1;
     public static final int ACTION_READ_COS_VERSION = 2;
     public static final int ACTION_READ_MT_SN = 3;
     public static final int ACTION_READ_POWER_LEVEL = 4;
+    public static final int ACTION_ISHAVE_KEY = 5;
+    public static final int ACTION_CHECK_KEY = 6;
 
     public static int CURRENT_ACTION = -1;
 
@@ -43,7 +43,7 @@ public class BoxManager {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             switch (msg.what) {
-                case ACTION_CHECK_KEY:
+                case ACTION_ISHAVE_KEY:
                     //TODO key检查结果，检查是否需要进行配对
                     boolean flag = (boolean)msg.obj;
                     if (flag){
@@ -61,6 +61,7 @@ public class BoxManager {
                 case ACTION_READ_MAC:
                     //TODO 读取MAC地址
                     byte[] mac = (byte[])msg.obj;
+                    SharedUtil.set(TRAction.SHARED_BT_ADDR,ByteUtil.toMacAddr(mac));
                     LogUtil.d("mac addr: " + ByteUtil.toMacAddr(mac));
                     postDelayed(new Runnable() {
                         @Override
@@ -143,6 +144,7 @@ public class BoxManager {
         CURRENT_ACTION = ACTION_GEMERAT_KEY;
         LogUtil.d("send generateKey cmd");
         String key = TextUtil.getRandomString(6);
+        SharedUtil.set(TRAction.SHARED_BT_KEY, key);//保存key
         byte[] sendReq = BLEUtil.getKeySaveReq(key);
         try {
             BLEManager.getDefault().send(sendReq);
@@ -198,6 +200,19 @@ public class BoxManager {
     public void CheckTask() {
         //TODO 检测是否已经配对成功
         CheckPair();
+
+    }
+
+    /**
+     * 校验key
+     */
+    public void sendChkKey(){
+        CURRENT_ACTION = ACTION_CHECK_KEY;
+        try {
+            BLEManager.getDefault().send(Constant.keyChkReq);
+        } catch (BLEException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -205,11 +220,15 @@ public class BoxManager {
      *
      */
     private void CheckPair() {
-        CURRENT_ACTION = ACTION_CHECK_KEY;
+        CURRENT_ACTION = ACTION_ISHAVE_KEY;
         try {
             BLEManager.getDefault().send(Constant.keyStateReq);
         } catch (BLEException e) {
             e.printStackTrace();
         }
     }
+
+
+
+
 }
