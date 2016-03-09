@@ -57,7 +57,7 @@ public class BoxManager {
                     }, 100);
                     break;
                 case ACTION_GEMERAT_KEY:
-                    //TODO 保存key结果
+                    //TODO 保存key成功
 
                     postDelayed(new Runnable() {
                         @Override

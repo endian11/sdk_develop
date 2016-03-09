@@ -40,7 +40,7 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
         LogUtil.d(TAG, "onConnectionStateChange : status:" + status + "   newState:" + newState);
 
         //TODO GATT执行失败
-//        if (status != BluetoothGatt) {
+//        if (status != BluetoothGatt.GATT_SUCCESS) {
 //            BLEManager.getDefault().setConnect(false);
 //            BLEManager.getDefault().ConnectFaild();
 //            return;
@@ -57,8 +57,6 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
             LogUtil.d("BluetoothGatt is disconnect");
             BLEManager.getDefault().setConnect(false);
         }
-
-
     }
 
     @Override
@@ -88,17 +86,13 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
                 for (BluetoothGattCharacteristic gattChar : results) {
                     // UUID_RECV是接收蓝牙盒子数据的Characteristic
                     if (gattChar == null || gattChar.getUuid() == null) continue;
-
                     LogUtil.e(TAG, "---->char uuid:" + gattChar.getUuid());
-
                     int permission = gattChar.getPermissions();
                     LogUtil.e(TAG,
                             "---->char permission:"
                                     + BLEUtil.getCharPermission(permission));
-
                     int property = gattChar.getProperties();
                     LogUtil.e(TAG, "---->char property:" + BLEUtil.getCharPropertie(property));
-
                     byte[] data = gattChar.getValue();
                     if (data != null && data.length > 0) {
                         LogUtil.e(TAG, "---->char value:" + new String(data));
@@ -132,7 +126,6 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
                         LogUtil.d("BluetoothGatt equals UUID_TX");
                         gatt.setCharacteristicNotification(gattChar, true);
                         BLEManager.getDefault().setmCharacter(gattChar);
-
                         //TODO 执行其它
                         LogUtil.d("BluetoothGatt send order");
                         BoxManager.getDefault().CheckTask();
@@ -163,14 +156,14 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
 
         switch (status) {
             case BluetoothGatt.GATT_SUCCESS:
-                LogUtil.d(TAG, "BT TX succ：" + ByteUtil.toHexString(
+                LogUtil.d(TAG, "Characteristic write succ：" + ByteUtil.toHexString(
                         characteristic.getValue()));
                 break;// 写入成功
             case BluetoothGatt.GATT_FAILURE:
-                LogUtil.d(TAG, "写入失败");
+                LogUtil.d(TAG, "Characteristic write faild：");
                 break;// 写入失败
             case BluetoothGatt.GATT_WRITE_NOT_PERMITTED:
-                LogUtil.d(TAG, "没有写入的权限");
+                LogUtil.d(TAG, "Characteristic no write permission");
                 break;// 没有写入的权限
         }
     }

@@ -22,11 +22,10 @@ import sdk.travelrely.lib.util.LogUtil;
  * Created by weihaichao on 16/2/29.
  *
  */
-public class TRSdk {
+public class TRSdk implements IDeviceface {
     private static TRSdk sdk;
     private Context mContext;
-    private TRDevice device;
-    private IBleServiceAidl bleService;
+    private TRDevice mDevice;
     private BluetoothAdapter mAdapter;
 
     /**
@@ -62,7 +61,7 @@ public class TRSdk {
         return sdk;
     }
 
-    public BluetoothAdapter getBlueAdapter(){
+    public BluetoothAdapter getBlueAdapter() {
         return mAdapter;
     }
 
@@ -75,38 +74,8 @@ public class TRSdk {
         mContext = context;
         mAdapter = BluetoothAdapter.getDefaultAdapter();
 
-//        Intent mIntent = new Intent();
-//        mIntent.setPackage(mContext.getPackageName());
-//        mIntent.setAction(BleService.ACTION);
-//        mContext.startService(mIntent);
-//        mContext.bindService(mIntent,connection,Context.BIND_AUTO_CREATE);
-
         initModules();
     }
-
-    private IBleCallback.Stub mBleCallback = new IBleCallback.Stub() {
-        @Override
-        public void found() throws RemoteException {
-            LogUtil.d("bleservice found device...");
-        }
-    };
-
-    private ServiceConnection connection = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName name, IBinder service) {
-            bleService = IBleServiceAidl.Stub.asInterface(service);
-            try {
-                bleService.registBleCallback(mBleCallback);
-            } catch (RemoteException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-            bleService = null;
-        }
-    };
 
     /**
      * 获取上下文实例
@@ -121,7 +90,7 @@ public class TRSdk {
      * 初始化各模块
      */
     private void initModules() {
-        device = getDevice();
+        createDevice();
     }
 
     /**
@@ -129,16 +98,16 @@ public class TRSdk {
      *
      * @return
      */
-    public synchronized TRDevice getDevice() {
+    private synchronized void createDevice() {
         if (!IsError()) {
-            if (device == null) device = new TRDevice(mContext);
-            return device;
+            if (mDevice == null) mDevice = new TRDevice(mContext);
         }
-
-        return null;
     }
 
-    public void disconnectBlueTooth(){
+    /**
+     * 断开蓝牙连接
+     */
+    public void disconnectBlueTooth() {
         BLEManager.getDefault().disconnect();
     }
 
@@ -150,8 +119,29 @@ public class TRSdk {
     private Boolean IsError() {
         if (mContext == null) return true;
 
-
         return false;
     }
 
+    @Override
+    public void startScan(ITRCallback callback) {
+        if (mDevice == null) createDevice();
+        mDevice.startScan(callback);
+    }
+
+    @Override
+    public void stopScan() {
+        if (mDevice == null) createDevice();
+        mDevice.stopScan();
+    }
+
+    @Override
+    public Boolean pairByDevice(BluetoothDevice device) {
+        if (mDevice == null) createDevice();
+        return mDevice.pairByDevice(device);
+    }
+
+    @Override
+    public void pairByUUID(String UUID) {
+
+    }
 }
