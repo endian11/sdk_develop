@@ -37,7 +37,6 @@ public class SimManager extends BaseManager {
     }
 
 
-
     public void readSimInfo() {
 
         if (BLEManager.getDefault().isConnect()) {
