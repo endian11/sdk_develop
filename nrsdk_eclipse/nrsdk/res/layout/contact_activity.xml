@@ -16,7 +16,7 @@
             android:layout_weight="1" >
             <fragment
                 android:id="@+id/dialPadFragment"
-                android:name="com.travelrely.v2.fragment.DialPadFragment"
+                android:name="com.travelrely.app.fragment.DialPadFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </FrameLayout>
