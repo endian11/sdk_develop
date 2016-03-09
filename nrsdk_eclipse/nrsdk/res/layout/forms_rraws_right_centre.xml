@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/forms_arrow_right_center_btn_bg"
+    android:duplicateParentState="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv_left"
+        style="@style/style_meal_one_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:duplicateParentState="true"
+        android:gravity="left"
+        android:paddingLeft="12dp" />
+
+    <TextView
+        android:id="@+id/tv_centre"
+        style="@style/style_meal_one_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/tv_right"
+        android:duplicateParentState="true"
+        android:paddingLeft="12dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_right"
+        style="@style/date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/img_rraws"
+        android:duplicateParentState="true"
+        android:paddingLeft="12dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_rraws"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:src="@drawable/arrow_right_bg" />
+
+    <TextView
+        android:id="@+id/tv_right_two"
+        style="@style/style_meal_one_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:duplicateParentState="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

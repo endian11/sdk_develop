@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include layout="@layout/navigation_bar" />
+
+    <com.travelrely.app.view.FormsArrawsRightButton
+        android:id="@+id/btnNRSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" >
+    </com.travelrely.app.view.FormsArrawsRightButton>
+
+    <com.travelrely.app.view.FormsArrawsRightButton
+        android:id="@+id/btnBleMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="12dp" >
+    </com.travelrely.app.view.FormsArrawsRightButton>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/forms_arrow_right_btn"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <com.travelrely.app.view.FormsArrawsRightUpBt
+            android:id="@+id/btnSyncContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+        </com.travelrely.app.view.FormsArrawsRightUpBt>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/line_bg" />
+
+        <com.travelrely.app.view.FormsArrawsRightCentreBt
+            android:id="@+id/i18n_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </com.travelrely.app.view.FormsArrawsRightCentreBt>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/line_bg"
+            android:visibility="gone" />
+
+        <com.travelrely.app.view.FormsArrawsRightDownBt
+            android:id="@+id/btnChangePswd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+        </com.travelrely.app.view.FormsArrawsRightDownBt>
+    </LinearLayout>
+
+    <com.travelrely.app.view.FormsFinishButton
+        android:id="@+id/btnLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp" >
+    </com.travelrely.app.view.FormsFinishButton>
+
+</LinearLayout>

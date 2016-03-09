@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_trip_to"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal" 
+    android:overScrollMode="always"
+    android:visibility="gone"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="3dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/trip_send_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/msg_state_sending" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/send_msg_type_above_right"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_to_trip_title"
+                style="@style/send_msg_type_above1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/travel_calendar" 
+                />
+
+            <TextView
+                android:id="@+id/tv_to_trip_time"
+                style="@style/send_msg_type_above2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="6.5dp"
+            android:background="@drawable/send_msg_type_middle"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:src="@drawable/s_clock" />
+
+            <TextView
+                android:id="@+id/tv_to_name_trip_clock"
+                style="@style/send_msg_type_centre2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="6.5dp"
+            android:background="@drawable/send_msg_type_middle"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" 
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:src="@drawable/s_alarm" />
+
+            <TextView
+                android:id="@+id/tv_to_name_trip_alarm"
+                style="@style/send_msg_type_centre2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="6.5dp"
+            android:background="@drawable/send_msg_type_below"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:src="@drawable/s_flag" />
+
+            <TextView
+                android:id="@+id/tv_to_name_trip_address"
+                style="@style/send_msg_type_centre2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
