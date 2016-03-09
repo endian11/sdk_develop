@@ -7,10 +7,10 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.travelrely.net.response.ResponseInfo;
+import com.travelrely.core.glms.response.ResponseInfo;
+import com.travelrely.core.util.SpUtil;
 import com.travelrely.v2.net_interface.OrderQueryRsp.Data.OrderInfo;
 import com.travelrely.v2.response.BaseData;
-import com.travelrely.v2.util.SpUtil;
 
 /** 
  * 

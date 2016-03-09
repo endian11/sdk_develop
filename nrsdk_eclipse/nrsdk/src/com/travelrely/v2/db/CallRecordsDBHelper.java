@@ -6,9 +6,9 @@ import java.util.List;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.travelrely.core.Engine;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.util.LOGManager;
 import com.travelrely.model.CallRecord;
-import com.travelrely.v2.util.LOGManager;
 
 public class CallRecordsDBHelper
 {

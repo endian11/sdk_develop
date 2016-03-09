@@ -8,9 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.travelrely.core.Res;
+import com.travelrely.core.nrs.Res;
+import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.util.Utils;
 
 public class ContentGridViewAdapter extends BaseAdapter {
 

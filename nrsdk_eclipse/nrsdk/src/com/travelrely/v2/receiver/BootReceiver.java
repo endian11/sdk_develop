@@ -5,8 +5,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
+import com.travelrely.core.util.LOGManager;
 import com.travelrely.v2.service.TravelService;
-import com.travelrely.v2.util.LOGManager;
 
 public class BootReceiver extends BroadcastReceiver {
 	static final String ACTION = "android.intent.action.BOOT_COMPLETED";

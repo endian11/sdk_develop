@@ -8,16 +8,16 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.text.TextUtils;
 
-import com.travelrely.core.Engine;
-import com.travelrely.core.IAction;
-import com.travelrely.core.ReleaseConfig;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.nrs.ReleaseConfig;
+import com.travelrely.core.util.LOGManager;
+import com.travelrely.core.util.SpUtil;
+import com.travelrely.core.util.UrlUtil;
 import com.travelrely.v2.db.ServerIpDbHelper;
 import com.travelrely.v2.model.ServerIp;
 import com.travelrely.v2.net_interface.GetCommStatusRsp;
 import com.travelrely.v2.net_interface.LoginRsp;
-import com.travelrely.v2.util.LOGManager;
-import com.travelrely.v2.util.SpUtil;
-import com.travelrely.v2.util.UrlUtil;
 
 public class LoginService extends Service
 {

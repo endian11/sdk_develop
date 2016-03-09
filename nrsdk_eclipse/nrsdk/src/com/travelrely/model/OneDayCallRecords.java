@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import com.travelrely.v2.util.TimeUtil;
+import com.travelrely.core.util.TimeUtil;
 
 /**
  * 一天的拨号记录

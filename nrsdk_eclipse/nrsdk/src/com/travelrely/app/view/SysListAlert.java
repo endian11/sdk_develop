@@ -18,8 +18,8 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.util.Utils;
 
 public class SysListAlert extends Dialog implements OnItemClickListener
 {

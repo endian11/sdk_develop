@@ -11,10 +11,10 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.travelrely.core.Engine;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.util.LOGManager;
 import com.travelrely.model.ContactModel;
 import com.travelrely.v2.response.TraMessage;
-import com.travelrely.v2.util.LOGManager;
 
 public class TravelrelyMessageDBHelper {
 

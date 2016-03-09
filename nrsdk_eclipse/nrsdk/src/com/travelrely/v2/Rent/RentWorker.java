@@ -7,9 +7,9 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
-import com.travelrely.core.Engine;
-import com.travelrely.core.nr.util.ByteUtil;
-import com.travelrely.core.nr.voice.rtpTerminal;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.nr.util.ByteUtil;
+import com.travelrely.core.nrs.nr.voice.rtpTerminal;
 import com.travelrely.v2.Rent.msg.AgtRentCalledReq;
 import com.travelrely.v2.Rent.msg.RentAgtByeInd;
 import com.travelrely.v2.Rent.msg.RentAgtCalledRsp;

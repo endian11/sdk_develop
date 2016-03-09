@@ -8,9 +8,9 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.travelrely.core.glms.response.BaseResponse;
+import com.travelrely.core.glms.response.ResponseInfo;
 import com.travelrely.model.ContactModel;
-import com.travelrely.net.response.BaseResponse;
-import com.travelrely.net.response.ResponseInfo;
 
 public class DownloadContact extends BaseResponse implements Serializable {
 

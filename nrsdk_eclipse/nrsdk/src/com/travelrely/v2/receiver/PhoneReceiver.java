@@ -1,13 +1,13 @@
 package com.travelrely.v2.receiver;
 
+import com.travelrely.core.util.LOGManager;
+
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
-
-import com.travelrely.v2.util.LOGManager;
 
 public class PhoneReceiver extends BroadcastReceiver
 {

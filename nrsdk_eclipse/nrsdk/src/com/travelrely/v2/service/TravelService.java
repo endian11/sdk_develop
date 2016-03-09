@@ -20,26 +20,26 @@ import android.os.IBinder;
 import android.os.SystemClock;
 import android.util.Log;
 
-import com.travelrely.core.Constant;
-import com.travelrely.core.Engine;
-import com.travelrely.core.IAction;
+import com.travelrely.core.glms.HttpConnector;
+import com.travelrely.core.glms.json.request.Request;
+import com.travelrely.core.nrs.Constant;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.util.AESUtils;
+import com.travelrely.core.util.DeviceInfo;
+import com.travelrely.core.util.FileUtil;
+import com.travelrely.core.util.LOGManager;
+import com.travelrely.core.util.UrlUtil;
 import com.travelrely.model.ContactModel;
-import com.travelrely.net.HttpConnector;
 import com.travelrely.sdk.SDKAction;
 import com.travelrely.v2.db.ContactDBHelper;
 import com.travelrely.v2.db.ReceptionInfoDBHelper;
 import com.travelrely.v2.db.TravelrelyMessageDBHelper;
-import com.travelrely.v2.json.request.Request;
 import com.travelrely.v2.model.ReceptionInfo;
 import com.travelrely.v2.response.GetMessage;
 import com.travelrely.v2.response.NotifyMe;
 import com.travelrely.v2.response.Response;
 import com.travelrely.v2.response.TraMessage;
-import com.travelrely.v2.util.AESUtils;
-import com.travelrely.v2.util.DeviceInfo;
-import com.travelrely.v2.util.FileUtil;
-import com.travelrely.v2.util.LOGManager;
-import com.travelrely.v2.util.UrlUtil;
 
 public class TravelService extends Service {
 

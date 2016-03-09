@@ -1,13 +1,17 @@
 package com.travelrely.sdk;
 
 import com.igexin.sdk.PushManager;
-import com.travelrely.core.Engine;
-import com.travelrely.core.ReleaseConfig;
-import com.travelrely.core.Res;
-import com.travelrely.net.request.GetVerifyCodeReq;
-import com.travelrely.net.request.VerifyReq;
-import com.travelrely.net.response.GetVerifyCodeRsp;
-import com.travelrely.net.response.VerifyRsp;
+import com.travelrely.core.glms.request.GetVerifyCodeReq;
+import com.travelrely.core.glms.request.VerifyReq;
+import com.travelrely.core.glms.response.GetVerifyCodeRsp;
+import com.travelrely.core.glms.response.VerifyRsp;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.ReleaseConfig;
+import com.travelrely.core.nrs.Res;
+import com.travelrely.core.util.LogUtil;
+import com.travelrely.core.util.SpUtil;
+import com.travelrely.core.util.UrlUtil;
+import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.R;
 import com.travelrely.v2.db.GroupDBHelper;
 import com.travelrely.v2.net_interface.GetCommStatusRsp;
@@ -15,10 +19,6 @@ import com.travelrely.v2.net_interface.LoginRsp;
 import com.travelrely.v2.net_interface.LogoutReq;
 import com.travelrely.v2.net_interface.LogoutRsp;
 import com.travelrely.v2.net_interface.TransferClientIdReq;
-import com.travelrely.v2.util.LogUtil;
-import com.travelrely.v2.util.SpUtil;
-import com.travelrely.v2.util.UrlUtil;
-import com.travelrely.v2.util.Utils;
 
 import android.app.Activity;
 import android.content.Context;

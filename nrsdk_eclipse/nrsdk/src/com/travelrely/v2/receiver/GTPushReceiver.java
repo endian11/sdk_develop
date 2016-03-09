@@ -2,14 +2,14 @@ package com.travelrely.v2.receiver;
 
 import com.igexin.sdk.PushConsts;
 import com.igexin.sdk.PushManager;
-import com.travelrely.core.App;
-import com.travelrely.core.ConstantValue;
-import com.travelrely.core.Engine;
-import com.travelrely.core.nr.NRService;
-import com.travelrely.core.nr.msg.MsgId;
-import com.travelrely.v2.GetMsg.FetchMessage;
-import com.travelrely.v2.util.LOGManager;
-import com.travelrely.v2.util.LogUtil;
+import com.travelrely.core.glms.GetMsg.FetchMessage;
+import com.travelrely.core.nrs.App;
+import com.travelrely.core.nrs.ConstantValue;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.nr.NRService;
+import com.travelrely.core.nrs.nr.msg.MsgId;
+import com.travelrely.core.util.LOGManager;
+import com.travelrely.core.util.LogUtil;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

@@ -10,13 +10,13 @@ import android.os.Message;
 import android.os.Vibrator;
 
 import com.travelrely.app.activity.NRSetAct;
-import com.travelrely.core.ConstantValue;
-import com.travelrely.core.IAction;
-import com.travelrely.core.nr.LockService;
+import com.travelrely.core.nrs.ConstantValue;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.nrs.nr.LockService;
+import com.travelrely.core.util.PreferencesUtil;
 import com.travelrely.v2.Rent.msg.AgtRentCalledReq;
 import com.travelrely.v2.Rent.msg.RentMsgId;
 import com.travelrely.v2.service.PlayMusic;
-import com.travelrely.v2.util.PreferencesUtil;
 
 public class RentService extends Service
 {

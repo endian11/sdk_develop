@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import org.json.JSONObject;
 
-import com.travelrely.net.response.ResponseInfo;
+import com.travelrely.core.glms.response.ResponseInfo;
 
 
 public class Payment extends BaseData implements Serializable{

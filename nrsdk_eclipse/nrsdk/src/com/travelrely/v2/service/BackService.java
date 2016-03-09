@@ -3,15 +3,15 @@ package com.travelrely.v2.service;
 import android.app.IntentService;
 import android.content.Intent;
 
-import com.travelrely.core.Engine;
-import com.travelrely.core.IAction;
-import com.travelrely.core.IntentMsg;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.nrs.IntentMsg;
+import com.travelrely.core.util.LOGManager;
+import com.travelrely.core.util.LogUtil;
+import com.travelrely.core.util.SpUtil;
+import com.travelrely.core.util.UrlUtil;
 import com.travelrely.v2.net_interface.GetCommStatusRsp;
 import com.travelrely.v2.net_interface.LoginRsp;
-import com.travelrely.v2.util.LOGManager;
-import com.travelrely.v2.util.LogUtil;
-import com.travelrely.v2.util.SpUtil;
-import com.travelrely.v2.util.UrlUtil;
 
 public class BackService extends IntentService
 {

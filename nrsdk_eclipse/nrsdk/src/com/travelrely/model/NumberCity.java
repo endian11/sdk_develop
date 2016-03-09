@@ -3,9 +3,9 @@ package com.travelrely.model;
 import java.io.Serializable;
 import java.util.TimeZone;
 
-import com.travelrely.core.Engine;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.util.TimeZoneIDS;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.util.TimeZoneIDS;
 
 public class NumberCity implements Serializable
 {

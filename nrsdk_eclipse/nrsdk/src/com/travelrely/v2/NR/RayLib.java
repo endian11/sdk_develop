@@ -1,6 +1,6 @@
 package com.travelrely.v2.NR;
 
-import com.travelrely.v2.util.LogUtil;
+import com.travelrely.core.util.LogUtil;
 
 public class RayLib
 {

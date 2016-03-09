@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import org.json.JSONObject;
 
-import com.travelrely.net.response.BaseResponse;
+import com.travelrely.core.glms.response.BaseResponse;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;

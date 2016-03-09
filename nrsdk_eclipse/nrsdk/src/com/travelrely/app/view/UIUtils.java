@@ -1,6 +1,6 @@
 package com.travelrely.app.view;
 
-import com.travelrely.core.App;
+import com.travelrely.core.nrs.App;
 
 import android.os.Handler;
 

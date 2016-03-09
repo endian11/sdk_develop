@@ -19,16 +19,16 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.travelrely.core.Engine;
-import com.travelrely.core.nr.util.MessageUtil;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.nr.util.MessageUtil;
+import com.travelrely.core.util.FileUtil;
+import com.travelrely.core.util.TimeUtil;
+import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.R;
 import com.travelrely.v2.db.GroupDBHelper;
 import com.travelrely.v2.db.TravelrelyMessageDBHelper;
 import com.travelrely.v2.response.GetNewGroup;
 import com.travelrely.v2.response.TraMessage;
-import com.travelrely.v2.util.FileUtil;
-import com.travelrely.v2.util.TimeUtil;
-import com.travelrely.v2.util.Utils;
 
 public class SystemMessageAdapter extends NavigationBaseAdapter {
 

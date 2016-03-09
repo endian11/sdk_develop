@@ -5,7 +5,7 @@ import java.util.List;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.travelrely.core.Engine;
+import com.travelrely.core.nrs.Engine;
 import com.travelrely.v2.model.UserRoamProfile;
 
 public class UserRoamProfileDBHelper

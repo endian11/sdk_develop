@@ -4,11 +4,11 @@ import org.json.JSONObject;
 
 import android.content.Context;
 
-import com.travelrely.core.Engine;
-import com.travelrely.core.ReleaseConfig;
-import com.travelrely.net.HttpConnector;
-import com.travelrely.v2.json.request.Request;
-import com.travelrely.v2.util.LOGManager;
+import com.travelrely.core.glms.HttpConnector;
+import com.travelrely.core.glms.json.request.Request;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.ReleaseConfig;
+import com.travelrely.core.util.LOGManager;
 
 public class VerifySuccReq
 {

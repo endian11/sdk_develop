@@ -7,8 +7,8 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.travelrely.net.response.BaseResponse;
-import com.travelrely.net.response.ResponseInfo;
+import com.travelrely.core.glms.response.BaseResponse;
+import com.travelrely.core.glms.response.ResponseInfo;
 
 public class GetReorderPrice extends BaseResponse implements Serializable
 {

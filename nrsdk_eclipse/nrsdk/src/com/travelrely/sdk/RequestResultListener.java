@@ -1,6 +1,6 @@
 package com.travelrely.sdk;
 
-import com.travelrely.net.response.ResponseInfo;
+import com.travelrely.core.glms.response.ResponseInfo;
 
 public interface RequestResultListener {
 	public void success(ResponseInfo responseInfo);

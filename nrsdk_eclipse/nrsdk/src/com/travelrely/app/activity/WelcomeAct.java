@@ -9,10 +9,10 @@ import android.os.Handler;
 import android.util.DisplayMetrics;
 
 import com.igexin.sdk.PushManager;
-import com.travelrely.core.Engine;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.util.LOGManager;
+import com.travelrely.core.util.SpUtil;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.util.LOGManager;
-import com.travelrely.v2.util.SpUtil;
 
 public class WelcomeAct extends BaseActivity
 {

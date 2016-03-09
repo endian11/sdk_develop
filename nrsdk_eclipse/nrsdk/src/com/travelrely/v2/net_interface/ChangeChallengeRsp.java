@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 import org.json.JSONObject;
 
-import com.travelrely.net.response.BaseResponse;
-import com.travelrely.net.response.ResponseInfo;
+import com.travelrely.core.glms.response.BaseResponse;
+import com.travelrely.core.glms.response.ResponseInfo;
 import com.travelrely.v2.response.BaseData;
 
 public class ChangeChallengeRsp extends BaseResponse implements Serializable

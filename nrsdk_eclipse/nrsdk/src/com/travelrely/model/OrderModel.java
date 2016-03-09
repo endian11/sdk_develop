@@ -1,6 +1,6 @@
 package com.travelrely.model;
 
-import com.travelrely.v2.util.TimeUtil;
+import com.travelrely.core.util.TimeUtil;
 
 public class OrderModel extends Model {
 

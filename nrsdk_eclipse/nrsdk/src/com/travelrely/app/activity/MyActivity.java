@@ -21,24 +21,24 @@ import com.travelrely.app.view.FormsArrawsRightUpBt;
 import com.travelrely.app.view.PullScrollView;
 import com.travelrely.app.view.SysAlertDialog;
 import com.travelrely.app.view.SysAlertDialog.OnSysAlertClickListener;
-import com.travelrely.core.ConstantValue;
-import com.travelrely.core.Engine;
-import com.travelrely.core.IAction;
-import com.travelrely.core.ReleaseConfig;
-import com.travelrely.net.ProgressOverlay;
-import com.travelrely.net.ProgressOverlay.OnProgressEvent;
+import com.travelrely.core.glms.ProgressOverlay;
+import com.travelrely.core.glms.GetMsg.FetchMessage;
+import com.travelrely.core.glms.ProgressOverlay.OnProgressEvent;
+import com.travelrely.core.nrs.ConstantValue;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.IAction;
+import com.travelrely.core.nrs.ReleaseConfig;
+import com.travelrely.core.util.FileUtil;
+import com.travelrely.core.util.PreferencesUtil;
+import com.travelrely.core.util.SpUtil;
+import com.travelrely.core.util.SysUtil;
+import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.GetMsg.FetchMessage;
 import com.travelrely.v2.db.UserRoamProfileDBHelper;
 import com.travelrely.v2.model.UserRoamProfile;
 import com.travelrely.v2.net_interface.GetUsrInfoRsp.Data;
 import com.travelrely.v2.net_interface.GetUsrInfoRsp.PersonalInfo;
 import com.travelrely.v2.response.TripInfo;
-import com.travelrely.v2.util.FileUtil;
-import com.travelrely.v2.util.PreferencesUtil;
-import com.travelrely.v2.util.SpUtil;
-import com.travelrely.v2.util.SysUtil;
-import com.travelrely.v2.util.Utils;
 
 public class MyActivity extends NavigationActivity implements OnClickListener, PullScrollView.OnTurnListener
 {

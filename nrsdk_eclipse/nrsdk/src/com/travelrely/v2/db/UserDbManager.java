@@ -2,7 +2,7 @@ package com.travelrely.v2.db;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.travelrely.core.Engine;
+import com.travelrely.core.nrs.Engine;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;

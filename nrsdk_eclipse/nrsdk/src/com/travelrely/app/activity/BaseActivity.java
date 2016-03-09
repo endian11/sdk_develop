@@ -16,11 +16,11 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.baidu.mobstat.StatService;
-import com.travelrely.core.Engine;
-import com.travelrely.core.ReleaseConfig;
-import com.travelrely.core.nr.msg.MsgId;
-import com.travelrely.core.nr.util.ActivityCollector;
-import com.travelrely.v2.util.LOGManager;
+import com.travelrely.core.nrs.Engine;
+import com.travelrely.core.nrs.ReleaseConfig;
+import com.travelrely.core.nrs.nr.msg.MsgId;
+import com.travelrely.core.nrs.nr.util.ActivityCollector;
+import com.travelrely.core.util.LOGManager;
 
 public class BaseActivity extends Activity
 {

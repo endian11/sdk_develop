@@ -8,7 +8,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.travelrely.net.response.ResponseInfo;
+import com.travelrely.core.glms.response.ResponseInfo;
 
 public class GetGroupMsg extends BaseData implements Serializable{
 	

@@ -14,13 +14,13 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.text.TextUtils;
 
+import com.travelrely.core.glms.response.BaseResponse;
+import com.travelrely.core.util.AESUtils;
+import com.travelrely.core.util.AlarmUtil;
+import com.travelrely.core.util.FileUtil;
+import com.travelrely.core.util.TimeUtil;
+import com.travelrely.core.util.Utils;
 import com.travelrely.model.ContactModel;
-import com.travelrely.net.response.BaseResponse;
-import com.travelrely.v2.util.AESUtils;
-import com.travelrely.v2.util.AlarmUtil;
-import com.travelrely.v2.util.FileUtil;
-import com.travelrely.v2.util.TimeUtil;
-import com.travelrely.v2.util.Utils;
 
 public class TraMessage extends BaseResponse implements Serializable, Comparable<TraMessage> {
     /**
