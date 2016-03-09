@@ -9,6 +9,7 @@ import sdk.travelrely.lib.Constant;
 import sdk.travelrely.lib.TRSdk;
 import sdk.travelrely.lib.device.exception.BLEException;
 import sdk.travelrely.lib.device.util.BLEUtil;
+import sdk.travelrely.lib.util.ByteUtil;
 import sdk.travelrely.lib.util.LogUtil;
 import sdk.travelrely.lib.util.TextUtil;
 
@@ -44,11 +45,23 @@ public class BoxManager {
             switch (msg.what) {
                 case ACTION_CHECK_KEY:
                     //TODO key检查结果，检查是否需要进行配对
-
+                    boolean flag = (boolean)msg.obj;
+                    if (flag){
+                        LogUtil.d("有key");//证明该盒子 已经跟别的手机配对过。
+                    }else{
+                        LogUtil.d("无key");
+                        postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                readMacAddress();
+                            }
+                        },100);
+                    }
                     break;
                 case ACTION_READ_MAC:
                     //TODO 读取MAC地址
-
+                    byte[] mac = (byte[])msg.obj;
+                    LogUtil.d("mac addr: " + ByteUtil.toMacAddr(mac));
                     postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -135,9 +148,7 @@ public class BoxManager {
             BLEManager.getDefault().send(sendReq);
         } catch (BLEException e) {
             e.printStackTrace();
-        } finally {
-            sendReq = null;
-        }
+        } 
 
     }
 
@@ -192,7 +203,6 @@ public class BoxManager {
     /**
      * 检测是否已经配对过
      *
-     * @return
      */
     private void CheckPair() {
         CURRENT_ACTION = ACTION_CHECK_KEY;
