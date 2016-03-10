@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,14 +11,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.travelrely.app.activity.MessageActivity;
 import com.travelrely.app.adapter.SmsChatListAdapter;
 import com.travelrely.core.nrs.Engine;
 import com.travelrely.core.nrs.IAction;
 import com.travelrely.core.util.TimeUtil;
-import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.db.SmsEntityDBHelper;
+import com.travelrely.app.db.SmsEntityDBHelper;
 import com.travelrely.v2.model.SmsEntity;
 
 /**

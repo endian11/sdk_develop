@@ -1,4 +1,4 @@
-package com.travelrely.v2.db;
+package com.travelrely.app.db;
 
 import com.travelrely.core.util.LOGManager;
 

@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 
 import com.travelrely.app.view.SmsEntityItem;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.db.SmsEntityDBHelper;
+import com.travelrely.app.db.SmsEntityDBHelper;
 import com.travelrely.v2.model.SmsEntity;
 
 

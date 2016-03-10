@@ -46,7 +46,7 @@ import com.travelrely.sdk.SDKAction;
 import com.travelrely.v2.AesLib;
 import com.travelrely.sdk.R;
 import com.travelrely.v2.Rent.RentCallAct;
-import com.travelrely.v2.db.SmsEntityDBHelper;
+import com.travelrely.app.db.SmsEntityDBHelper;
 import com.travelrely.v2.model.SmsEntity;
 import com.travelrely.v2.service.PlayMusic;
 

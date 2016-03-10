@@ -9,7 +9,7 @@ import java.util.List;
 import com.travelrely.core.nrs.nr.util.ByteUtil;
 import com.travelrely.core.nrs.nr.util.TextUtil;
 import com.travelrely.core.util.LogUtil;
-import com.travelrely.v2.db.SmsSegDbHelper;
+import com.travelrely.app.db.SmsSegDbHelper;
 import com.travelrely.v2.model.SmsSeg;
 
 public class SmsReceiver

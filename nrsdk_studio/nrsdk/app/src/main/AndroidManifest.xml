@@ -380,7 +380,7 @@
             android:required="false" />
 
         <provider
-            android:name="com.travelrely.v2.db.CallLogContentProvider"
+            android:name="com.travelrely.app.db.CallLogContentProvider"
             android:authorities="com.travelrely.sdk"
             android:exported="false"
             android:label="BatchNumbers" />

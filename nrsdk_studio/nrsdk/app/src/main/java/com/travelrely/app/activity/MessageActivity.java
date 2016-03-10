@@ -41,9 +41,9 @@ import com.travelrely.core.util.SpUtil;
 import com.travelrely.core.util.Utils;
 import com.travelrely.model.ContactModel;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.db.ContactDBHelper;
-import com.travelrely.v2.db.SmsEntityDBHelper;
-import com.travelrely.v2.db.TravelrelyMessageDBHelper;
+import com.travelrely.app.db.ContactDBHelper;
+import com.travelrely.app.db.SmsEntityDBHelper;
+import com.travelrely.app.db.TravelrelyMessageDBHelper;
 import com.travelrely.v2.model.SmsEntity;
 import com.travelrely.v2.response.TraMessage;
 

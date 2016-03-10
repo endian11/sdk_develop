@@ -8,7 +8,7 @@ import android.database.Cursor;
 import android.provider.CallLog;
 
 import com.travelrely.core.util.TimeUtil;
-import com.travelrely.v2.db.ContactDBHelper;
+import com.travelrely.app.db.ContactDBHelper;
 
 public class CallRecord extends BaseModel implements Serializable
 {

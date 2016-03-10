@@ -12,7 +12,7 @@ import com.travelrely.core.nrs.nr.util.CallUtil;
 import com.travelrely.core.nrs.nr.util.MessageUtil;
 import com.travelrely.model.ContactModel;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.db.ContactDBHelper;
+import com.travelrely.app.db.ContactDBHelper;
 import com.travelrely.v2.model.SmsEntity;
 import com.travelrely.v2.response.TraMessage;
 

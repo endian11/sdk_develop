@@ -25,8 +25,8 @@ import com.travelrely.core.util.FileUtil;
 import com.travelrely.core.util.TimeUtil;
 import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.db.GroupDBHelper;
-import com.travelrely.v2.db.TravelrelyMessageDBHelper;
+import com.travelrely.app.db.GroupDBHelper;
+import com.travelrely.app.db.TravelrelyMessageDBHelper;
 import com.travelrely.v2.response.GetNewGroup;
 import com.travelrely.v2.response.TraMessage;
 

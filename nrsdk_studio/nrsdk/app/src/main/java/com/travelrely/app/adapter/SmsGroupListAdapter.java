@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.travelrely.core.util.TimeUtil;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.db.SmsEntityDBHelper;
+import com.travelrely.app.db.SmsEntityDBHelper;
 import com.travelrely.v2.model.SmsEntity;
 
 

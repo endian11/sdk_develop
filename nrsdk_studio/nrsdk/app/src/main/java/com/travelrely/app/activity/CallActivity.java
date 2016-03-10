@@ -51,7 +51,7 @@ import com.travelrely.model.CallRecord;
 import com.travelrely.model.ContactModel;
 import com.travelrely.sdk.Api;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.db.ContactDBHelper;
+import com.travelrely.app.db.ContactDBHelper;
 
 public class CallActivity extends Activity implements OnClickListener,
         OnCheckedChangeListener, OnChronometerTickListener

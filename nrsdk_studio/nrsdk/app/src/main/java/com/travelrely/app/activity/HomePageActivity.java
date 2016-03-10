@@ -19,9 +19,7 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.igexin.sdk.PushManager;
-import com.travelrely.app.activity.LoginActivity;
 import com.travelrely.sdk.R;
-import com.travelrely.app.activity.MyActivity;
 import com.travelrely.app.view.SysAlertDialog;
 import com.travelrely.app.view.SysAlertDialog.OnSysAlertClickListener;
 import com.travelrely.core.nrs.Constant;
@@ -31,8 +29,8 @@ import com.travelrely.core.nrs.IAction;
 import com.travelrely.core.util.LogUtil;
 import com.travelrely.core.util.SpUtil;
 import com.travelrely.core.util.SysUtil;
-import com.travelrely.v2.db.SmsEntityDBHelper;
-import com.travelrely.v2.db.TravelrelyMessageDBHelper;
+import com.travelrely.app.db.SmsEntityDBHelper;
+import com.travelrely.app.db.TravelrelyMessageDBHelper;
 import com.travelrely.v2.model.SmsEntity;
 import com.travelrely.v2.response.TraMessage;
 

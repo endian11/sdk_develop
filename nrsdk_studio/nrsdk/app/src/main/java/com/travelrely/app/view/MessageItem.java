@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -49,7 +48,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.travelrely.app.activity.MessageActivity;
 import com.travelrely.app.adapter.MessageListViewAdapter;
 import com.travelrely.app.view.SysListAlert.OnListAlertClickListener;
 import com.travelrely.core.glms.ProgressOverlay;
@@ -67,9 +65,9 @@ import com.travelrely.core.util.Utils;
 import com.travelrely.model.ContactModel;
 import com.travelrely.model.ContactModel.TagNumber;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.db.ContactDBHelper;
-import com.travelrely.v2.db.TravelrelyMessageDBHelper;
-import com.travelrely.v2.db.TripInfoDBHelper;
+import com.travelrely.app.db.ContactDBHelper;
+import com.travelrely.app.db.TravelrelyMessageDBHelper;
+import com.travelrely.app.db.TripInfoDBHelper;
 import com.travelrely.v2.model.CheckTextNumModel;
 import com.travelrely.v2.model.LocationModel;
 import com.travelrely.v2.response.GetGroupMsg;

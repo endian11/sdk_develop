@@ -7,8 +7,8 @@ import android.util.SparseArray;
 
 import com.travelrely.core.util.LogUtil;
 import com.travelrely.core.util.MyExceptionHandler;
-import com.travelrely.v2.db.ComDBOpenHelper;
-import com.travelrely.v2.db.ComDbManager;
+import com.travelrely.app.db.ComDBOpenHelper;
+import com.travelrely.app.db.ComDbManager;
 
 public class App extends Application
 {

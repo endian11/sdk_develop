@@ -14,7 +14,7 @@ import android.text.TextUtils;
 
 import com.travelrely.core.glms.response.BaseResponse;
 import com.travelrely.core.nrs.Engine;
-import com.travelrely.v2.db.UserDBOpenHelper;
+import com.travelrely.app.db.UserDBOpenHelper;
 import com.travelrely.v2.response.FetchToken.Data.FetchTokenContact;
 
 public class ContactModel extends BaseResponse implements Serializable

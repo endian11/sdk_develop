@@ -34,7 +34,7 @@ import com.travelrely.core.util.SpUtil;
 import com.travelrely.core.util.SysUtil;
 import com.travelrely.core.util.Utils;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.db.UserRoamProfileDBHelper;
+import com.travelrely.app.db.UserRoamProfileDBHelper;
 import com.travelrely.v2.model.UserRoamProfile;
 import com.travelrely.v2.net_interface.GetUsrInfoRsp.Data;
 import com.travelrely.v2.net_interface.GetUsrInfoRsp.PersonalInfo;

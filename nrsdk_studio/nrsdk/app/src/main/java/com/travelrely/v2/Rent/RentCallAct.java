@@ -36,7 +36,6 @@ import android.widget.RemoteViews;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-import com.travelrely.app.activity.ContactActivity;
 import com.travelrely.app.view.DrawRoundView;
 import com.travelrely.core.nrs.Engine;
 import com.travelrely.core.nrs.IAction;
@@ -47,8 +46,8 @@ import com.travelrely.model.CallRecord;
 import com.travelrely.model.ContactModel;
 import com.travelrely.sdk.R;
 import com.travelrely.sdk.SDKAction;
-import com.travelrely.v2.db.CallRecordsDBHelper;
-import com.travelrely.v2.db.ContactDBHelper;
+import com.travelrely.app.db.CallRecordsDBHelper;
+import com.travelrely.app.db.ContactDBHelper;
 
 public class RentCallAct extends Activity implements OnClickListener,
         OnCheckedChangeListener, OnChronometerTickListener

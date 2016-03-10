@@ -38,7 +38,7 @@ import com.travelrely.core.util.SpUtil;
 import com.travelrely.core.util.Utils;
 import com.travelrely.model.ContactModel;
 import com.travelrely.sdk.R;
-import com.travelrely.v2.db.GroupDBHelper;
+import com.travelrely.app.db.GroupDBHelper;
 import com.travelrely.v2.net_interface.LogoutReq;
 import com.travelrely.v2.net_interface.LogoutRsp;
 import com.travelrely.v2.response.GetNoroamingStatus;

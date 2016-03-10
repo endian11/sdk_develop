@@ -1,6 +1,4 @@
-package com.travelrely.v2.db;
-
-import java.util.ArrayList;
+package com.travelrely.app.db;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -8,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.travelrely.core.nrs.Engine;
 import com.travelrely.v2.response.GetNewGroup;
-import com.travelrely.v2.response.GroupMsg;
 import com.travelrely.v2.response.GetNewGroup.Data;
 import com.travelrely.v2.response.GroupList;
 

@@ -1,5 +1,5 @@
 
-package com.travelrely.v2.db;
+package com.travelrely.app.db;
 
 import android.content.ContentValues;
 import android.database.Cursor;

@@ -14,7 +14,7 @@ import com.travelrely.core.nrs.ReleaseConfig;
 import com.travelrely.core.util.LOGManager;
 import com.travelrely.core.util.SpUtil;
 import com.travelrely.core.util.UrlUtil;
-import com.travelrely.v2.db.ServerIpDbHelper;
+import com.travelrely.app.db.ServerIpDbHelper;
 import com.travelrely.v2.model.ServerIp;
 import com.travelrely.v2.net_interface.GetCommStatusRsp;
 import com.travelrely.v2.net_interface.LoginRsp;

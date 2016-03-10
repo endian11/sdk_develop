@@ -1,84 +1,90 @@
-package com.travelrely.v2.db;
+package com.travelrely.app.db;
 
 import java.util.List;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.travelrely.v2.model.Package0;
+import com.travelrely.v2.model.ExpressPrice;
 
-public class PackageDbHelper
+public class ExpPriceDbHelper
 {
-    static String tableName = "package";
+    static String tableName = "express_price";
     
     public static String createTable()
     {
         String table = "CREATE TABLE if not exists " + tableName + " ("
                 + "id integer primary key autoincrement,"
-                + "mcc text,"
-                + "mnc text,"
-                + "days integer,"
-                + "price text,"
-                + "data text,"
-                + "localvoice text,"
-                + "iddvoice text" + ")";
+                + "state_name text,"
+                + "express_price text,"
+                + "currency_unit integer"
+                + ")";
         return table;
     }
     
-    private static PackageDbHelper instance;
+    private static ExpPriceDbHelper instance;
 
-    private PackageDbHelper()
+    private ExpPriceDbHelper()
     {
         
     }
 
-    public static PackageDbHelper getInstance()
+    public static ExpPriceDbHelper getInstance()
     {
         if (instance == null)
         {
-            instance = new PackageDbHelper();
+            instance = new ExpPriceDbHelper();
         }
         return instance;
     }
     
-    public void insertAll(List<Package0> pkgs)
+    public void insertAll(List<ExpressPrice> pkgs)
     {
         SQLiteDatabase db = ComDbManager.getInstance().openDb();
         
+        db.beginTransaction();
         db.execSQL("drop table if EXISTS " + tableName);
         db.execSQL(createTable());
 
-        for (Package0 pkg : pkgs)
+        for (ExpressPrice pkg : pkgs)
         {
             db.insert(tableName, null, pkg.getContentValues());
         }
         
+        db.setTransactionSuccessful();
+        db.endTransaction();
+        
         ComDbManager.getInstance().closeDb();
     }
 
-    public long insert(Package0 pkg)
+    public long cover(ExpressPrice pkg)
     {
         SQLiteDatabase db = ComDbManager.getInstance().openDb();
+        
+        // 先删除已有记录
+        String sql = "state_name like ?";
+        db.delete(tableName, sql, new String[] {pkg.getStateName() + "%"});
         
         long id = db.insert(tableName, null, pkg.getContentValues());
         ComDbManager.getInstance().closeDb();
         return id;
     }
     
-    public Package0 query(String mcc, String mnc, String days)
+    public ExpressPrice query(String state_name)
     {
         SQLiteDatabase db = ComDbManager.getInstance().openDb();
         
         String sql = "select * from " + tableName
-                + " where mcc=? and mnc=? and days=?";
-        Cursor cursor = db.rawQuery(sql, new String[] {mcc, mnc, days});
+                + " where state_name like ?";
+        Cursor cursor = db.rawQuery(sql,
+                new String[] {state_name + "%"});
         if (cursor == null)
         {
             ComDbManager.getInstance().closeDb();
             return null;
         }
 
-        Package0 profile = new Package0();
+        ExpressPrice profile = new ExpressPrice();
 
         while (cursor.moveToNext())
         {
@@ -89,5 +95,16 @@ public class PackageDbHelper
         ComDbManager.getInstance().closeDb();
 
         return profile;
+    }
+    
+    public float getPrice(String state)
+    {
+        ExpressPrice ep = query(state);
+        if (ep == null)
+        {
+            return 0;
+        }
+        
+        return ep.getExpressPrice();
     }
 }

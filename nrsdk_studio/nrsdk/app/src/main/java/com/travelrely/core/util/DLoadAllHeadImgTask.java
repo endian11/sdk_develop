@@ -6,7 +6,7 @@ import android.os.AsyncTask;
 
 import com.travelrely.core.nrs.Engine;
 import com.travelrely.model.ContactModel.TagNumber;
-import com.travelrely.v2.db.ContactDBHelper;
+import com.travelrely.app.db.ContactDBHelper;
 
 /**
  * 启动任务下载头像

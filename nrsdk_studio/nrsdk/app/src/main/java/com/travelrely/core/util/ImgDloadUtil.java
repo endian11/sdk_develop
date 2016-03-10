@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.travelrely.core.nrs.Engine;
 import com.travelrely.model.ContactModel.TagNumber;
-import com.travelrely.v2.db.ContactDBHelper;
+import com.travelrely.app.db.ContactDBHelper;
 
 public class ImgDloadUtil
 {

@@ -7,7 +7,7 @@ import android.os.AsyncTask;
 import com.travelrely.core.nrs.Engine;
 import com.travelrely.core.nrs.Res;
 import com.travelrely.model.ContactModel;
-import com.travelrely.v2.db.ContactDBHelper;
+import com.travelrely.app.db.ContactDBHelper;
 
 public class FetchTokensTask extends
         AsyncTask<List<ContactModel>, String, String>

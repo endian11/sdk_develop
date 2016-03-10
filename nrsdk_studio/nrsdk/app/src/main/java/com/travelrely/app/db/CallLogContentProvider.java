@@ -1,6 +1,4 @@
-package com.travelrely.v2.db;
-
-import com.travelrely.core.nrs.Engine;
+package com.travelrely.app.db;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;

@@ -1,5 +1,5 @@
 
-package com.travelrely.v2.db;
+package com.travelrely.app.db;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.travelrely.core.nrs.Engine;
 import com.travelrely.v2.response.GroupMsg;
-import com.travelrely.v2.response.GetNewGroup.Data;
 
 /**
  * 群成员信息表

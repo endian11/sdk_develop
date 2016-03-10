@@ -1,4 +1,4 @@
-package com.travelrely.v2.db;
+package com.travelrely.app.db;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,7 +21,6 @@ import com.travelrely.core.util.Utils;
 import com.travelrely.core.util.HanziToPinyin.Token;
 import com.travelrely.model.ContactModel;
 import com.travelrely.model.ContactModel.TagNumber;
-import com.travelrely.v2.response.GetAppVersion;
 
 /**
  * 1.负责将手机系统的通讯录及sim卡里的通讯录读取 <br>
