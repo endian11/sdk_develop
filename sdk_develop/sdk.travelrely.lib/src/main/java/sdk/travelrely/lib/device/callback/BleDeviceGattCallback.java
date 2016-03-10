@@ -40,11 +40,13 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
         LogUtil.d(TAG, "onConnectionStateChange : status:" + status + "   newState:" + newState);
 
         //TODO GATT执行失败
-//        if (status != BluetoothGatt.GATT_SUCCESS) {
-//            BLEManager.getDefault().setConnect(false);
-//            BLEManager.getDefault().ConnectFaild();
-//            return;
-//        }
+        if (status != BluetoothGatt.GATT_SUCCESS) {
+            if (status == 133 || status == 129) {
+                BLEManager.getDefault().setConnect(false);
+                BLEManager.getDefault().ConnectFaild();
+            }
+            return;
+        }
 
         if (newState == BluetoothProfile.STATE_CONNECTED) {
             //TODO 连接成功
@@ -61,6 +63,7 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
 
     @Override
     public void onServicesDiscovered(BluetoothGatt gatt, int status) {
+        //TODO 当发现蓝牙设备service 做相应处理
         super.onServicesDiscovered(gatt, status);
         LogUtil.d("BluetoothGatt -> status " + status);
         if (gatt == null) {
@@ -153,7 +156,7 @@ public class BleDeviceGattCallback extends BluetoothGattCallback {
     @Override
     public void onCharacteristicWrite(BluetoothGatt gatt,
                                       BluetoothGattCharacteristic characteristic, int status) {
-
+        //TODO 当向蓝牙设备发送数据结果
         switch (status) {
             case BluetoothGatt.GATT_SUCCESS:
                 LogUtil.d(TAG, "Characteristic write succ：" + ByteUtil.toHexString(

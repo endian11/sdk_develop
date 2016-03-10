@@ -10,20 +10,24 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.widget.Toast;
 
 import sdk.travelrely.lib.config.SDKConfig;
 import sdk.travelrely.lib.device.exception.BLEException;
 import sdk.travelrely.lib.device.manager.BLEManager;
 import sdk.travelrely.lib.minterface.IDeviceface;
 import sdk.travelrely.lib.minterface.ITRCallback;
+import sdk.travelrely.lib.minterface.TRAlertCallback;
+import sdk.travelrely.lib.minterface.TRSdkCallback;
 import sdk.travelrely.lib.service.BleService;
 import sdk.travelrely.lib.util.LogUtil;
+import sdk.travelrely.lib.util.ToastUtil;
 
 /**
  * Created by weihaichao on 16/2/29.
  *
  */
-public class TRSdk implements IDeviceface {
+public class TRSdk implements IDeviceface,TRSdkCallback {
     private static TRSdk sdk;
     private Context mContext;
     private TRDevice mDevice;
@@ -149,5 +153,19 @@ public class TRSdk implements IDeviceface {
     public Boolean pairByMacAddress(String macaddress) {
         if(mDevice == null) createDevice();
         return mDevice.pairByMacAddress(macaddress);
+    }
+
+    @Override
+    public void faild(Object message) {
+        LogUtil.d("error:"+message);
+        disconnectBlueTooth();
+        ToastUtil.showLong(mContext,message.toString());
+    }
+
+    @Override
+    public void alert(Object message) {
+        LogUtil.d("alert:"+message);
+        disconnectBlueTooth();
+        ToastUtil.showLong(mContext,message.toString());
     }
 }

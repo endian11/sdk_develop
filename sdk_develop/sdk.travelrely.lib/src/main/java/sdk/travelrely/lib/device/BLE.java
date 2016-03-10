@@ -6,7 +6,7 @@ package sdk.travelrely.lib.device;
  * ＊ sdk.travelrely.lib.device.ble
  * ＊ 17:32
  */
-public class BLE {
+public final class BLE {
     public final static int NR_BLE_MSG = 0;
     public final static int NR_BLE_FIND_BOX = 1;
     public final static int NR_BLE_MATCH_BOX = 2;
@@ -54,6 +54,31 @@ public class BLE {
     public final static int UI_BLE_READ_UL01 = UI_BLE_MSG + 0x01;
     public final static int UI_BLE_SAVE_DL01 = UI_BLE_MSG + 0x02;
     public final static int UI_BLE_CANCLE_VSIM = UI_BLE_MSG + 0x03;
+
+    /**
+     * ProcessMessage 中处理该处蓝牙设备返回结果数据
+     * 判断执行下一步所要执行的事件
+     */
+    public static final int ACTION_READ_MAC = 0;//读取mac地址
+    public static final int ACTION_GEMERAT_KEY = 1;//写入key
+    public static final int ACTION_READ_COS_VERSION = 2;//读取cos版本号
+    public static final int ACTION_READ_MT_SN = 3;//读取mt-sn
+    public static final int ACTION_READ_POWER_LEVEL = 4;//读取电量
+    public static final int ACTION_ISHAVE_KEY = 5;//是否一些乳key
+    public static final int ACTION_CHECK_KEY = 6;//验证key
+    public static final int ACTION_READ_SIMINFO = 7;//读取sim卡信息
+
+    public static int CURRENT_ACTION = -1;
+
+    /**
+     * 当前连接蓝牙的行为
+     */
+    public static final int BLE_MODE_NORMAL = 0;//正常状态
+    public static final int BLE_MODE_CALL = 1;//来电话状态
+    public static final int BLE_MODE_SMS = 2;//来短信的状态
+
+    public static int CURRENT_BLE_MODE = BLE_MODE_NORMAL;//当前状态 默认为 正常状态
+
 
 
 }

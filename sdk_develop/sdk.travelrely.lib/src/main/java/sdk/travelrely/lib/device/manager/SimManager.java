@@ -1,9 +1,16 @@
 package sdk.travelrely.lib.device.manager;
 
 import android.os.Message;
+import android.text.TextUtils;
 
 import sdk.travelrely.lib.Constant;
+import sdk.travelrely.lib.TRAction;
+import sdk.travelrely.lib.device.BLE;
 import sdk.travelrely.lib.device.exception.BLEException;
+import sdk.travelrely.lib.device.util.BLEUtil;
+import sdk.travelrely.lib.obersver.DeviceManagerObersver;
+import sdk.travelrely.lib.util.LogUtil;
+import sdk.travelrely.lib.util.SharedUtil;
 
 /**
  * Created by john on 2016/3/9.
@@ -16,10 +23,6 @@ public class SimManager extends BaseManager {
         super();
     }
 
-
-    public static final int ACTION_READ_SIM = 0;
-    public static  int CURRENT_ACTION = -1;
-
     public static SimManager getDefault() {
         return manager;
     }
@@ -29,18 +32,18 @@ public class SimManager extends BaseManager {
         super.receiveMessage(message);
 
         switch (message.what) {
+            case BLE.ACTION_READ_SIMINFO:
+                LogUtil.d("receive BoxManager.ACTION_READ_SIMINFO :" + message.obj);
+                break;
 
-            case ACTION_READ_SIM:
-                //收到SIM卡信息解析完之后的数据
-                               break;
         }
     }
-
     /**
-     * 读取sim卡信息
+     * 读取SIM卡信息
      */
-    public void readSimInfo() {
-        CURRENT_ACTION = ACTION_READ_SIM;
+    public void ReadSim() {
+        BLE.CURRENT_ACTION = BLE.ACTION_READ_SIMINFO;
+        LogUtil.d("send ReadSim cmd");
         try {
             BLEManager.getDefault().send(Constant.simInfoReq);
         } catch (BLEException e) {
@@ -48,4 +51,10 @@ public class SimManager extends BaseManager {
         }
     }
 
+    /**
+     * @param needCheck 是否检查key存在
+     */
+    public void readSimInfo(Boolean needCheck) {
+
+    }
 }

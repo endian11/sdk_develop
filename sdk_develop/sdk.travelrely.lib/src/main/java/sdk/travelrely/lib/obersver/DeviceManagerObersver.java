@@ -11,6 +11,7 @@ import sdk.travelrely.lib.minterface.IDeviceManager;
 
 /**
  * ＊ sdk_develop
+ * BLE 数据解析观察器
  * Created by weihaichao on 16/3/9.
  * ＊ sdk.travelrely.lib.obersver
  * ＊ 15:56

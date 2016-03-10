@@ -12,6 +12,7 @@ public class SDKConfig {
     public static Boolean DEBUG = false;
 
     public static String getSharedName() {
+        //TODO 获取本地缓存shard的标记名称
         if (DEBUG) {
             return TRSdk.getInstance().getContext().getPackageName() + "shared.debug";
         } else {

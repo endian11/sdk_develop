@@ -63,6 +63,7 @@ public class BlueToothScan extends Thread implements BlueToothCallbackCreator.BT
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void run() {
+        //TODO  启动蓝牙设备搜索进程
         super.run();
 
         if (!checkBlueTooth()) {
@@ -113,6 +114,7 @@ public class BlueToothScan extends Thread implements BlueToothCallbackCreator.BT
      * @return 返回BlueTooth实例
      */
     private synchronized Boolean checkBlueTooth() {
+        //TODO 检查蓝牙是否已经启用
         if (!TRSdk.getInstance().getBlueAdapter().isEnabled()) {
             if (TRSdk.getInstance().getBlueAdapter().enable()) {
                 while (!TRSdk.getInstance().getBlueAdapter().isEnabled()) {
@@ -138,6 +140,7 @@ public class BlueToothScan extends Thread implements BlueToothCallbackCreator.BT
      * @param device 蓝牙设备
      */
     private void dispatchCallback(int action, BluetoothDevice device) {
+         //TODO 派发发现蓝牙设备事件
         if (mHandler == null) return;
         Message message = mHandler.obtainMessage();
         message.arg1 = action;
