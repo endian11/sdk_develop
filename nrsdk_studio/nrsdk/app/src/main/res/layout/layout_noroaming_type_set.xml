@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/navigation_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_call_alert" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/forms_arrow_right_btn"
+                android:orientation="vertical" >
+
+                <com.travelrely.app.view.FormsRightOnOff
+                    android:id="@+id/layout_call_voice_on_off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/line_bg" />
+
+                <com.travelrely.app.view.FormsRightOnOff
+                    android:id="@+id/layout_call_vabration_on_off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/forms_arrow_right_down_btn_bg" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status_switching" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/forms_arrow_right_btn"
+                android:orientation="vertical" >
+
+                <com.travelrely.app.view.FormsRightOnOff
+                    android:id="@+id/layout_line_on_off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/line_bg" />
+
+                <com.travelrely.app.view.FormsRightOnOff
+                    android:id="@+id/layout_time_on_off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/forms_arrow_right_down_btn_bg" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/line_bg"
+                    android:visibility="gone" />
+
+                <com.travelrely.app.view.FormsArrawsRightCentreBt
+                    android:id="@+id/layout_date_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/line_bg"
+                    android:visibility="gone" />
+
+                <com.travelrely.app.view.FormsArrawsRightCentreBt
+                    android:id="@+id/layout_date_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp"
+                android:text="@string/status_explain1"
+                android:textColor="@color/msg_call_title"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="19dp"
+                android:paddingRight="19dp"
+                android:text="@string/status_explain2"
+                android:textColor="@color/msg_call_title"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="蓝牙盒子"
+                android:visibility="gone" />
+
+            <com.travelrely.app.view.FormsRightOnOff
+                android:id="@+id/btUpdateAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/forms_arrow_right_btn"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

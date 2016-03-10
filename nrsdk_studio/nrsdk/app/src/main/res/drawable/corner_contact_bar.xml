@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"><shape>
+            <stroke android:width="@dimen/corners_stroke" />
+
+            <solid android:color="@color/translate" />
+
+            <corners android:bottomLeftRadius="@dimen/corners_radius" android:bottomRightRadius="@dimen/corners_radius" android:topLeftRadius="@dimen/corners_radius" android:topRightRadius="@dimen/corners_radius"></corners>
+
+            <padding android:bottom="@dimen/padding_small_mini" android:left="@dimen/padding_small_mini" android:right="@dimen/padding_small_mini" android:top="@dimen/padding_small_mini" />
+        </shape></item>
+    <item android:state_focused="true"><shape>
+            <stroke android:width="@dimen/corners_stroke" />
+
+            <solid android:color="@color/contact_bar" />
+
+            <corners android:bottomLeftRadius="@dimen/corners_radius" android:bottomRightRadius="@dimen/corners_radius" android:topLeftRadius="@dimen/corners_radius" android:topRightRadius="@dimen/corners_radius"></corners>
+
+            <padding android:bottom="@dimen/padding_small_mini" android:left="@dimen/padding_small_mini" android:right="@dimen/padding_small_mini" android:top="@dimen/padding_small_mini" />
+        </shape></item>
+    <item><shape>
+            <stroke android:width="@dimen/corners_stroke" />
+
+            <solid android:color="#00000000" />
+
+            <corners android:bottomLeftRadius="@dimen/corners_radius" android:bottomRightRadius="@dimen/corners_radius" android:topLeftRadius="@dimen/corners_radius" android:topRightRadius="@dimen/corners_radius"></corners>
+
+            <padding android:bottom="@dimen/padding_small_mini" android:left="@dimen/padding_small_mini" android:right="@dimen/padding_small_mini" android:top="@dimen/padding_small_mini" />
+        </shape></item>
+
+</selector>

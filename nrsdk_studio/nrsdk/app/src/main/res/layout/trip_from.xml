@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_trip_from"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:overScrollMode="always"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/send_msg_type_above_left"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_from_trip_title"
+            style="@style/send_msg_type_above1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/travel_calendar" />
+
+        <TextView
+            android:id="@+id/tv_from_trip_time"
+            style="@style/send_msg_type_above2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="6.5dp"
+        android:background="@drawable/send_msg_type_middle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="5dp"
+            android:src="@drawable/s_clock" />
+
+        <TextView
+            android:id="@+id/tv_from_name_trip_alarm"
+            style="@style/send_msg_type_centre2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="6.5dp"
+        android:background="@drawable/send_msg_type_middle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="5dp"
+            android:src="@drawable/s_alarm" />
+
+        <TextView
+            android:id="@+id/tv_from_name_trip_clock"
+            style="@style/send_msg_type_centre2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="6.5dp"
+        android:background="@drawable/send_msg_type_centre"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="5dp"
+            android:src="@drawable/s_flag" />
+
+        <TextView
+            android:id="@+id/tv_from_name_trip_address"
+            style="@style/send_msg_type_centre2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_from_trip_accept"
+        style="@style/send_msg_type_below1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4.95dp"
+        android:layout_marginRight="1.3dp"
+        android:text="@string/tv_add_trip_calendar" />
+
+</LinearLayout>

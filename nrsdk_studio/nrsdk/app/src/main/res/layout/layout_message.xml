@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_message_frament"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include layout="@layout/navigation_bar" />
+
+    <com.travelrely.app.view.SwipeListView
+        android:id="@+id/travel_msg_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/gray_line"
+        android:dividerHeight="0.3dp"
+        android:footerDividersEnabled="true"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="always"
+        android:visibility="gone" />
+
+    <com.travelrely.app.view.SwipeListView
+        android:id="@+id/travel_msg_list_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/gray_line"
+        android:dividerHeight="0.3dp"
+        android:footerDividersEnabled="true"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="always"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/gray_line" />
+
+</LinearLayout>
