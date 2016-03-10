@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/startup.png",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/drawable-xxhdpi/startup.png"
+    }
+]

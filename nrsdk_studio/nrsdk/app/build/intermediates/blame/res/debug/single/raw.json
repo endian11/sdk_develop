@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/raw/lilac.mp3",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/raw/lilac.mp3"
+    },
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/raw/tx.aac",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/raw/tx.aac"
+    }
+]

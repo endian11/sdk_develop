@@ -1,0 +1,759 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:2:1-459:12
+	package
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:6:5-32
+		INJECTED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:5:5-29
+		INJECTED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:2:11-69
+	android:configChanges
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:4:5-35
+uses-sdk
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:support-v4:21.0.3] /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/AndroidManifest.xml:15:5-42
+	android:targetSdkVersion
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:10:9-38
+		INJECTED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:9:9-35
+		INJECTED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.MANAGE_DOCUMENTS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:11:5-74
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:11:22-72
+application
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:13:5-382:19
+MERGED from [com.android.support:support-v4:21.0.3] /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/AndroidManifest.xml:16:5-19
+	android:label
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:17:9-41
+	android:allowBackup
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:15:9-35
+	android:icon
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:16:9-45
+	android:theme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:18:9-45
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:14:9-51
+activity#com.travelrely.app.activity.WelcomeAct
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:33:9-49:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:35:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:36:13-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:34:13-66
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:37:13-41:29
+action#android.intent.action.MAIN
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:38:17-69
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:38:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:40:17-77
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:40:27-74
+intent-filter#android.intent.action.VIEW+android.intent.category.DEFAULT
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:42:13-48:29
+action#android.intent.action.VIEW
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:43:17-69
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:43:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:45:17-76
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:45:27-73
+data
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:47:17-61
+	android:scheme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:47:23-58
+activity#com.travelrely.app.activity.HomePageActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:51:9-56:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:54:13-49
+	android:launchMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:53:13-44
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:55:13-64
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:52:13-72
+activity#com.travelrely.app.activity.LoginActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:58:9-62:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:60:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:61:13-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:59:13-69
+activity#com.travelrely.app.activity.VerifyByBoxAct
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:64:9-68:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:66:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:67:13-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:65:13-70
+activity#com.travelrely.app.activity.SetActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:70:9-74:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:72:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:73:13-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:71:13-67
+activity#com.travelrely.app.activity.MyActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:76:9-80:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:78:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:79:13-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:77:13-66
+activity#com.travelrely.app.activity.SmsChatListAct
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:82:9-86:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:84:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:85:13-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:83:13-70
+receiver#com.travelrely.v2.receiver.GTPushReceiver
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:88:4-94:15
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:90:4-28
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:89:4-60
+intent-filter#com.igexin.sdk.action.ft8BmNg75Y90EiI2jpyBP7
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:91:4-93:20
+action#com.igexin.sdk.action.ft8BmNg75Y90EiI2jpyBP7
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:92:4-74
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:92:12-71
+service#com.igexin.sdk.PushService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:96:3-101:13
+	android:process
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:100:4-34
+	android:label
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:99:4-38
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:98:4-27
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:97:4-45
+service#com.igexin.sdk.PushServiceUser
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:103:3-107:13
+	android:label
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:106:4-42
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:105:4-27
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:104:4-49
+receiver#com.igexin.sdk.PushReceiver
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:109:3-122:14
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:109:13-55
+intent-filter#android.intent.action.ACTION_POWER_CONNECTED+android.intent.action.ACTION_POWER_DISCONNECTED+android.intent.action.BOOT_COMPLETED+android.intent.action.MEDIA_MOUNTED+android.intent.action.USER_PRESENT+android.net.conn.CONNECTIVITY_CHANGE+com.igexin.sdk.action.refreshls
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:110:4-121:20
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:111:4-66
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:111:12-63
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:112:4-66
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:112:12-63
+action#android.intent.action.USER_PRESENT
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:113:4-64
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:113:12-61
+action#com.igexin.sdk.action.refreshls
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:114:4-61
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:114:12-58
+action#android.intent.action.MEDIA_MOUNTED
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:116:4-65
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:116:12-62
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:117:4-118:6
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:117:12-71
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:119:4-120:69
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:120:4-66
+receiver#com.igexin.sdk.PushManagerReceiver
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:124:3-130:14
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:126:3-27
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:125:3-52
+intent-filter#com.igexin.sdk.action.pushmanager
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:127:4-129:20
+action#com.igexin.sdk.action.pushmanager
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:128:4-63
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:128:12-60
+activity#com.igexin.sdk.PushActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:131:3-138:14
+	android:process
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:135:4-34
+	android:excludeFromRecents
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:133:4-37
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:134:4-28
+	android:theme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:137:4-63
+	android:taskAffinity
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:136:4-58
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:132:4-46
+service#com.igexin.download.DownloadService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:139:3-141:36
+	android:process
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:141:3-33
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:140:3-53
+receiver#com.igexin.download.DownloadReceiver
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:142:3-146:14
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:142:13-64
+intent-filter#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:143:3-145:19
+provider#com.igexin.download.DownloadProvider
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:147:3-151:37
+	android:authorities
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:150:4-53
+	android:process
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:151:4-34
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:149:4-27
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:148:4-55
+activity#com.igexin.getuiext.activity.GetuiExtActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:152:3-159:66
+	android:process
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:157:4-34
+	android:excludeFromRecents
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:155:4-37
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:156:4-28
+	android:configChanges
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:154:4-63
+	android:theme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:159:4-63
+	android:taskAffinity
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:158:4-53
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:153:4-64
+receiver#com.igexin.getuiext.service.PayloadReceiver
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:160:3-168:14
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:162:4-28
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:161:4-62
+intent-filter#com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4+com.igexin.sdk.action.ft8BmNg75Y90EiI2jpyBP7
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:163:4-167:20
+action#com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:164:4-165:6
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:164:12-71
+service#com.igexin.getuiext.service.GetuiExtService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:169:3-171:37
+	android:process
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:171:4-34
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:170:4-62
+receiver#com.travelrely.app.SdkReceiver
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:174:9-185:20
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:176:13-37
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:175:13-58
+intent-filter#com.travelrely.NR_SDK_CALLED_ACTION+com.travelrely.NR_SDK_CALL_ACTION+com.travelrely.NR_SDK_NOTIFIY_REC_SMS+com.traveltrely.NR_SDK_SYSTEM_DIALOG+com.traveltrly.NR_SDK_NOTIFIY_MISSED_CALLN+com.traveltrly.NR_SDK_NOTIFIY_SMS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:177:13-184:29
+action#com.travelrely.NR_SDK_CALL_ACTION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:178:17-76
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:178:25-73
+action#com.travelrely.NR_SDK_CALLED_ACTION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:179:17-78
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:179:25-75
+action#com.travelrely.NR_SDK_NOTIFIY_REC_SMS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:180:17-80
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:180:25-77
+action#com.traveltrly.NR_SDK_NOTIFIY_MISSED_CALLN
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:181:17-85
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:181:25-82
+action#com.traveltrly.NR_SDK_NOTIFIY_SMS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:182:17-76
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:182:25-73
+action#com.traveltrely.NR_SDK_SYSTEM_DIALOG
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:183:17-78
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:183:25-76
+activity#com.travelrely.app.activity.ChatMsgListAct
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:187:9-192:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:190:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:191:13-73
+	android:configChanges
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:189:13-63
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:188:13-70
+activity#com.travelrely.app.activity.Alarmalert
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:194:9-199:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:196:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:198:13-67
+	android:theme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:197:13-54
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:195:13-66
+activity#com.travelrely.app.view.SystemDialog
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:201:9-206:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:203:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:205:13-67
+	android:theme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:204:13-52
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:202:13-64
+activity#com.travelrely.app.activity.SysDialogActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:207:9-212:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:209:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:211:13-67
+	android:theme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:210:13-52
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:208:13-73
+activity#com.travelrely.app.activity.ContactActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:213:9-217:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:215:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:216:13-64
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:214:13-71
+activity#com.travelrely.app.activity.MessageActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:218:9-222:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:220:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:221:13-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:219:13-71
+activity#com.travelrely.app.activity.NRAct
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:223:9-227:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:225:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:226:13-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:224:13-61
+activity#com.travelrely.app.activity.CallActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:229:9-242:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:231:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:233:13-67
+	android:theme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:232:13-48
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:230:13-68
+intent-filter#android.intent.category.DEFAULT+com.travelrely.NR_SDK_CALL_ACTION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:234:4-237:29
+intent-filter#android.intent.category.DEFAULT+com.travelrely.NR_SDK_CALLED_ACTION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:238:13-241:29
+activity#com.travelrely.app.activity.NRCallAct
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:243:9-248:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:245:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:247:13-67
+	android:theme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:246:13-48
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:244:13-65
+activity#com.travelrely.app.activity.NRSetAct
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:249:9-253:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:251:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:252:13-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:250:13-64
+activity#com.travelrely.v2.Rent.RentCallAct
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:254:9-259:20
+	android:screenOrientation
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:256:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:258:13-67
+	android:theme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:257:13-48
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:255:13-62
+activity#com.igexin.sdk.GActivity
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:261:12-267:66
+	android:process
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:265:5-35
+	android:excludeFromRecents
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:263:5-38
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:264:5-28
+	android:theme
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:267:5-64
+	android:taskAffinity
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:266:5-59
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:262:5-44
+meta-data#BaiduMobAd_STAT_ID
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:273:9-275:42
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:275:13-39
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:274:13-46
+meta-data#BaiduMobAd_CHANNEL
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:277:9-279:44
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:279:13-41
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:278:13-46
+meta-data#BaiduMobAd_EXCEPTION_LOG
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:282:9-284:36
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:284:13-33
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:283:13-52
+meta-data#BaiduMobAd_SEND_STRATEGY
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:286:9-288:41
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:288:13-38
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:287:13-52
+meta-data#BaiduMobAd_ONLY_WIFI
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:292:9-294:37
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:294:13-34
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:293:13-48
+meta-data#BaiduMobAd_CELL_LOCATION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:296:9-298:36
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:298:13-33
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:297:13-52
+meta-data#BaiduMobAd_GPS_LOCATION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:300:9-302:36
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:302:13-33
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:301:13-51
+meta-data#BaiduMobAd_WIFI_LOCATION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:304:9-306:36
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:306:13-33
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:305:13-52
+meta-data#PUSH_APPID
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:309:2-311:43
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:311:2-40
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:310:2-27
+meta-data#PUSH_APPKEY
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:312:2-314:42
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:314:2-39
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:313:2-28
+meta-data#PUSH_APPSECRET
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:315:2-317:43
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:317:2-40
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:316:2-31
+service#com.travelrely.v2.service.LoginService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:320:9-327:19
+	android:label
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:322:13-41
+	android:persistent
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:323:13-38
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:321:13-66
+intent-filter#LoginService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:324:13-326:29
+action#LoginService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:325:17-55
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:325:25-52
+service#com.travelrely.v2.service.TravelService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:328:9-331:19
+	android:label
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:330:13-38
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:329:13-67
+service#com.baidu.location.f
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:332:9-336:19
+	android:enabled
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:334:13-35
+	android:process
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:335:13-38
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:333:13-48
+receiver#com.travelrely.v2.service.CallAlarm
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:338:9-72
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:338:19-69
+service#com.travelrely.v2.service.PlayMusic
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:340:9-71
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:340:18-68
+service#com.travelrely.core.nrs.nr.NRService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:341:9-72
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:341:18-69
+service#com.travelrely.core.nrs.nr.LockService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:342:9-74
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:342:18-71
+service#com.travelrely.core.nrs.ble.BleService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:343:9-74
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:343:18-71
+service#com.travelrely.v2.Rent.RentService
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:344:9-70
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:344:18-67
+receiver#com.travelrely.v2.receiver.BootReceiver
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:346:9-354:20
+	android:label
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:348:13-45
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:347:13-67
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.category.LAUNCHER
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:349:13-353:29
+receiver#com.travelrely.v2.receiver.PhoneReceiver
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:355:9-360:20
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:355:19-74
+intent-filter#android.intent.action.NEW_OUTGOING_CALL+android.intent.action.PHONE_STATE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:356:13-359:29
+action#android.intent.action.PHONE_STATE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:357:17-76
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:357:25-73
+action#android.intent.action.NEW_OUTGOING_CALL
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:358:17-82
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:358:25-79
+meta-data#com.google.android.maps.v2.API_KEY
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:363:9-365:71
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:365:13-68
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:364:13-62
+meta-data#com.google.android.gms.version
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:366:9-368:69
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:368:13-66
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:367:13-58
+meta-data#com.amap.api.v2.apikey
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:369:9-371:64
+	android:value
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:371:13-61
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:370:13-50
+uses-library#com.google.android.maps
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:373:9-375:40
+	android:required
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:375:13-37
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:374:13-51
+provider#com.travelrely.app.db.CallLogContentProvider
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:377:9-381:44
+	android:authorities
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:379:13-53
+	android:label
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:381:13-41
+	android:exported
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:380:13-37
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:378:13-72
+permission#com.ucrobotics.mapdemo.permission.MAPS_RECEIVE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:385:5-387:47
+	android:protectionLevel
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:387:9-44
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:386:9-70
+uses-permission#com.ucrobotics.mapdemo.permission.MAPS_RECEIVE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:389:5-86
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:389:22-83
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:390:5-98
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:390:22-95
+uses-feature#0x00020000
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:392:5-394:35
+	android:glEsVersion
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:393:9-41
+	android:required
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:394:9-32
+uses-permission#android.permission.GET_TASKS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:396:5-68
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:396:22-65
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:399:5-73
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:399:22-70
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:400:5-71
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:400:22-68
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:401:5-84
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:401:22-81
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:404:5-72
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:404:22-69
+uses-permission#android.permission.WRITE_CONTACTS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:405:5-73
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:405:22-70
+uses-permission#android.permission.CALL_PHONE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:406:5-69
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:406:22-66
+uses-permission#android.permission.INTERNET
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:407:5-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:407:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:408:5-79
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:408:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:409:5-76
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:409:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:410:5-76
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:410:22-73
+uses-permission#android.permission.CHANGE_CONFIGURATION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:411:5-79
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:411:22-76
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:413:5-75
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:413:22-72
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:415:5-81
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:415:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:416:5-79
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:416:22-76
+uses-permission#android.permission.ACCESS_MOCK_LOCATION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:417:5-79
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:417:22-76
+uses-permission#android.permission.ACCESS_FIND_LOCATION
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:418:5-79
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:418:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:420:5-81
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:420:22-78
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:421:5-81
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:421:22-78
+uses-permission#android.permission.PROCESS_OUTGOING_CALLS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:424:5-81
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:424:22-78
+uses-permission#android.permission.READ_SMS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:426:5-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:426:22-64
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:427:5-70
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:427:22-67
+uses-permission#android.permission.SEND_SMS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:428:5-67
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:428:22-64
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:430:5-74
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:430:22-71
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:431:5-68
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:431:22-65
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:433:5-75
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:433:22-72
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:435:5-68
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:435:22-65
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:437:5-80
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:437:22-77
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:439:5-440:23
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:439:22-63
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:442:5-78
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:442:22-75
+uses-permission#android.permission.WRITE_CALL_LOG
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:444:5-73
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:444:22-70
+uses-permission#android.permission.READ_CALL_LOG
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:445:5-72
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:445:22-69
+uses-permission#getui.permission.GetuiService.com.travelrely.v2
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:453:5-87
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:453:22-84
+permission#getui.permission.GetuiService.com.travelrely.v2
+ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:455:5-458:18
+	android:protectionLevel
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:457:9-41
+	android:name
+		ADDED from /Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/AndroidManifest.xml:456:9-71

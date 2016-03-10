@@ -199,7 +199,7 @@
         </activity>
        
         <activity
-            android:name="com.travelrely.v2.view.SystemDialog"
+            android:name="com.travelrely.app.view.SystemDialog"
             android:screenOrientation="portrait"
             android:theme="@style/MyDialogStyleTop"
             android:windowSoftInputMode="adjustResize|stateHidden" >
@@ -356,11 +356,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.travelrely.v2.weixin_pay.AppRegister" >
-            <intent-filter>
-                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
             </intent-filter>
         </receiver>
 

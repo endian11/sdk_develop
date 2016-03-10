@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wheel_cancel"
+        android:orientation="vertical" 
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+ 
+        <TextView android:textColor="#000000"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:paddingTop="10dp"
+            />
+ 
+        <TextView android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/message"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:gravity="center"
+            />
+        
+                <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_line" />
+        
+        <RelativeLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" 
+            >
+            
+            <TextView
+                android:id="@+id/bt_left" 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+            	android:paddingBottom="10dp"
+            	android:layout_toLeftOf="@+id/centre_view"
+            	android:gravity="center"
+            	android:layout_centerVertical="true"
+            	android:textColor="@color/sky_blue"
+                />
+            
+            <View 
+                android:id="@+id/centre_view"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/gray_line"
+                />
+            
+            <TextView 
+                android:id="@+id/bt_right" 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+            	android:paddingBottom="10dp"
+            	android:layout_toRightOf="@id/centre_view"
+            	android:gravity="center"
+            	android:layout_centerVertical="true"
+            	android:textColor="@color/sky_blue"
+                />
+ 
+        </RelativeLayout>
+    </LinearLayout>
+ 
+</LinearLayout>

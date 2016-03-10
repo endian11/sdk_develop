@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/list_item_bg_normal.9.png",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/drawable-hdpi/list_item_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/grid_item_bg_normal.9.png",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/drawable-hdpi/grid_item_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/about.png",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/drawable-hdpi/about.png"
+    },
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_default.png",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/drawable-hdpi/ic_default.png"
+    },
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/startup.png",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/drawable-hdpi/startup.png"
+    },
+    {
+        "merged": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/grid_item_bg_pressed.9.png",
+        "source": "/Users/oldcwj/Android/src/android/git/android_sdk2/android_sdk/nrsdk_studio/nrsdk/app/src/main/res/drawable-hdpi/grid_item_bg_pressed.9.png"
+    }
+]

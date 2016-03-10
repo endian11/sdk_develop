@@ -2060,7 +2060,7 @@ public class Engine implements OnFetchTokenListener
      * download消息头像
      * 
      * @param mContext
-     * @param message
+     * @param imgPath
      * @param type
      */
     public String downloadHeadImg(Context mContext, String imgPath, String type)
@@ -2447,7 +2447,7 @@ public class Engine implements OnFetchTokenListener
     /**
      * 用来发送消息及回应 比如：发送签到及签到回应
      * 
-     * @param message2
+     * @param message
      */
     public void sendMessageInBackground(final Context mContext,
             final TraMessage message)
@@ -2733,7 +2733,7 @@ public class Engine implements OnFetchTokenListener
     /**
      * OPT 发送信息
      * 
-     * @param activity
+     * @param
      */
 //    public void sendSMS(Context mContext, String receiver, String sms)
 //    {
@@ -3437,8 +3437,8 @@ public class Engine implements OnFetchTokenListener
      * 
      * @param num 号码
      * @param numberLable 拨号方式 1=VOIP  2=旅信网络电话
-     * @param durations通话时间
-     * @param type拨号类型（来电:1  拨出:2   未接:3）
+     * @param durations 通话时间
+     * @param type 拨号类型（来电:1  拨出:2   未接:3）
      * @return
      */
     public CallRecord setCallRecord(String num, int numberLable, long durations, int type){
@@ -3508,7 +3508,6 @@ public class Engine implements OnFetchTokenListener
      * 获取用户漫游信息参数
      * 
      * @param mContext
-     * @param usrName
      * @return
      */
     public void getUserRoamProfileRequest(final Context mContext)

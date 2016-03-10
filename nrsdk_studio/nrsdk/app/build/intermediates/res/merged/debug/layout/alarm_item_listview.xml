@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    >
+    
+    <RelativeLayout
+        android:id="@+id/view_alarm" 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 
+    	android:layout_gravity="center_vertical"
+    	android:padding="@dimen/padding_small"
+    	android:background="@drawable/select_count_bg"
+        >
+
+    <ImageView
+        android:id="@+id/clock" 
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:src="@drawable/clock"
+        android:layout_centerVertical="true"
+        android:paddingLeft="5dp"
+        />
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/clock"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_small" 
+        >
+        
+        <TextView
+            android:id="@+id/alarm_name" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dedede"
+            style="@style/message_list_name_text"
+            android:singleLine="true"
+            android:paddingLeft="5dp"
+            />
+        
+        <TextView
+            android:id="@+id/alarm_time"  
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dcffvfvfvfvf"
+            style="@style/message_list_msg_text_gray"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:paddingLeft="5dp"
+            />
+        
+    </LinearLayout>
+    
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:src="@drawable/arrow_right_bg"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="@dimen/padding_medium" 
+        />
+        
+        </RelativeLayout>
+
+</LinearLayout>
