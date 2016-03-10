@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/send_voice_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:gravity="center_vertical|right"
+    android:orientation="horizontal" 
+    android:visibility="gone"
+    >
+
+    <TextView
+        android:id="@+id/voice_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送给别人" >
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/voice_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/say_right"
+        android:gravity="center_vertical|right" >
+
+        <TextView
+            android:id="@+id/length"
+            android:layout_width="10dip"
+            android:layout_height="match_parent"
+            android:text=" "
+             >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/voiceAni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/send_voice_playing" >
+        </ImageView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <include layout="@layout/navigation_bar" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_layout"
+        android:layout_below="@id/layout_top" >
+
+        <com.travelrely.app.view.PullDownListView
+            android:id="@+id/travel_msg_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:cacheColorHint="#00000000"
+            android:divider="#00000000"
+            android:dividerHeight="0dp"
+            android:listSelector="#00000000"
+            android:overScrollMode="always"
+            android:paddingBottom="12dp"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small"
+            android:scrollbars="none" 
+            android:transcriptMode="alwaysScroll"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/send_bar"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/talk_background_image"
+        android:orientation="horizontal"
+        android:paddingBottom="2dip"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dip" >
+
+        <ImageButton
+            android:id="@+id/img_content_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/msg_send_content" />
+
+        <ToggleButton
+            android:id="@+id/img_send_voic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_content_bt"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/msg_send_voic_bg"
+            android:textOff=""
+            android:textOn="" />
+
+        <EditText
+            android:id="@+id/ed_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/bt_send"
+            android:layout_toRightOf="@+id/img_send_voic"
+            android:maxLines="4" 
+            android:background="@drawable/edittext_bg"
+            />
+        
+        <Button
+            android:id="@+id/voic_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/bt_send"
+            android:layout_toRightOf="@+id/img_send_voic"
+            android:visibility="gone"
+            android:background="@drawable/msg_send_voic_context_bt_bg"
+            android:text="@string/tv_voic_bt"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/bt_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/send_msg" 
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:background="@drawable/msg_send_voic_context_bt_bg"
+            />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/send_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <GridView
+            android:id="@+id/grid_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/send_content_bg"
+            android:gravity="center"
+            android:numColumns="4"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:visibility="gone" />
+
+        <GridView
+            android:id="@+id/grid_smile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/send_content_bg"
+            android:gravity="center"
+            android:numColumns="9"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:verticalSpacing="10dp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

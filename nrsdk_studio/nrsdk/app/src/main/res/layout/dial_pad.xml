@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.travelrely.app.view.CallLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical"
+    android:weightSum="6" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <com.travelrely.app.view.AutoScaleTextView
+            android:id="@+id/call_num"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#1365a0"
+            android:textSize="16sp" >
+        </com.travelrely.app.view.AutoScaleTextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_1"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_2"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_3"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_4"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_5"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_6"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_7"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_8"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_9"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_xing"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_0"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <include
+                android:id="@+id/num_jing"
+                layout="@layout/call_number_item" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_small"
+        android:weightSum="3" >
+
+        <ImageView
+            android:id="@+id/new_person"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/one_pan"
+            android:layout_weight="1"
+            android:background="@drawable/new_person_btn_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/dial_add_btn" />
+
+        <RelativeLayout
+            android:id="@+id/call"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/one_pan"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/call_txt"
+                style="@style/style_white_mid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/dial_call_btn"
+                android:drawablePadding="10dip"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/one_pan"
+            android:layout_weight="1"
+            android:background="@drawable/delete_btn_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/dial_delete_btn" />
+    </LinearLayout>
+
+</com.travelrely.app.view.CallLayout>
