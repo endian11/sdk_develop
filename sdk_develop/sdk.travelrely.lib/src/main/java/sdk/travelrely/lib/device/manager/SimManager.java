@@ -8,6 +8,7 @@ import sdk.travelrely.lib.TRAction;
 import sdk.travelrely.lib.device.BLE;
 import sdk.travelrely.lib.device.exception.BLEException;
 import sdk.travelrely.lib.device.util.BLEUtil;
+import sdk.travelrely.lib.obersver.DeviceManagerObersver;
 import sdk.travelrely.lib.util.LogUtil;
 import sdk.travelrely.lib.util.SharedUtil;
 
@@ -31,19 +32,16 @@ public class SimManager extends BaseManager {
         super.receiveMessage(message);
 
         switch (message.what) {
-            case BLE.ACTION_CHECK_KEY:
-                LogUtil.d("receive BoxManager.ACTION_CHECK_KEY :" + message.obj);
-                if ((Boolean) message.obj) {
-                    ReadSim();
-                }
-                break;
             case BLE.ACTION_READ_SIMINFO:
                 LogUtil.d("receive BoxManager.ACTION_READ_SIMINFO :" + message.obj);
                 break;
+
         }
     }
-
-    private void ReadSim() {
+    /**
+     * 读取SIM卡信息
+     */
+    public void ReadSim() {
         BLE.CURRENT_ACTION = BLE.ACTION_READ_SIMINFO;
         LogUtil.d("send ReadSim cmd");
         try {
@@ -53,23 +51,10 @@ public class SimManager extends BaseManager {
         }
     }
 
+    /**
+     * @param needCheck 是否检查key存在
+     */
+    public void readSimInfo(Boolean needCheck) {
 
-    public void readSimInfo() {
-
-        if (BLEManager.getDefault().isConnect()) {
-            //蓝牙已经连接 校验key
-            BoxManager.getDefault().sendChkKey();
-            //校验key，失败 。整个任务失败
-        } else {
-            //蓝牙未连接，则连接蓝牙
-//            String mac = SharedUtil.get(TRAction.SHARED_BT_ADDR, "");
-//            if (!TextUtils.isEmpty(mac)) {
-//                BLEManager.getDefault().connect(mac);
-//
-//            } else {
-//                LogUtil.d("读取sim卡信息失败");
-//            }
-
-        }
     }
 }

@@ -2,7 +2,6 @@ package sdk.travelrely.lib;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
 import sdk.travelrely.lib.device.bluetooth.BlueToothScan;
@@ -20,7 +19,7 @@ public class TRDevice implements IDeviceface {
 
     private static final String TAG = TRDevice.class.getSimpleName();
 
-    private ITRCallback mCallback;
+    private ITRCallback scanCallback;
     private Context mContext;
     BlueToothScan scan;
 
@@ -32,7 +31,7 @@ public class TRDevice implements IDeviceface {
      * 清除回调函数
      */
     private void clearDeviceCallback() {
-        mCallback = null;
+        scanCallback = null;
     }
 
     /**
@@ -49,25 +48,26 @@ public class TRDevice implements IDeviceface {
      */
     @Override
     public void startScan(ITRCallback callback) throws BLEException {
+        //TODO 开始搜索蓝牙设备
         if (callback == null) {
-            if (mCallback != null) {
+            if (scanCallback != null) {
                 throw new BLEException("ITRCallback can not be null");
             }
         }
 
-        mCallback = callback;
+        scanCallback = callback;
 
         if (scan != null) {
             if (scan.isSearching()) {
-                if (mCallback != null)
-                    mCallback.faild("bluetooth is in searching....please stop it first");
+                if (scanCallback != null)
+                    scanCallback.faild("bluetooth is in searching....please stop it first");
                 return;
             } else {
                 scan = null;
             }
         }
 
-        scan = new BlueToothScan(mCallback);
+        scan = new BlueToothScan(scanCallback);
         scan.start();
     }
 
@@ -76,11 +76,11 @@ public class TRDevice implements IDeviceface {
      */
     @Override
     public Boolean pairByDevice(BluetoothDevice device) {
-        //TODO
+        //TODO 通过蓝牙设备进行配对
         stopScan();
         if (device == null) {
-            if (mCallback != null)
-                mCallback.faild("BluetoothDevice is null");
+            if (scanCallback != null)
+                scanCallback.faild("BluetoothDevice is null");
             return false;
         }
         return BLEManager.getDefault().connect(device.getAddress());
@@ -88,10 +88,11 @@ public class TRDevice implements IDeviceface {
 
     @Override
     public Boolean pairByMacAddress(String macaddress) {
+        //TODO 通过mac地址配对蓝牙设备
         stopScan();
         if (TextUtils.isEmpty(macaddress)) {
-            if (mCallback != null)
-                mCallback.faild("macAddress can not be empty");
+            if (scanCallback != null)
+                scanCallback.faild("macAddress can not be empty");
         }
         return BLEManager.getDefault().connect(macaddress);
     }
@@ -101,7 +102,7 @@ public class TRDevice implements IDeviceface {
      */
     @Override
     public void stopScan() {
-        //TODO
+        //TODO 停止搜索蓝牙设备
         if (scan != null) {
             LogUtil.d("stop search..");
             scan.stopScan();

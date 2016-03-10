@@ -22,6 +22,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import sdk.travelrely.lib.TRSdk;
+import sdk.travelrely.lib.device.BLE;
+import sdk.travelrely.lib.device.manager.BLEManager;
 import sdk.travelrely.lib.minterface.ITRCallback;
 import sdk.travelrely.lib.util.LogUtil;
 import sdk.travelrely.lib.util.ToastUtil;
@@ -202,8 +204,8 @@ public class LaunchActivity extends Activity implements ITRCallback, View.OnClic
                         @Override
                         public void run() {
                             String content = ((TextView) findViewById(R.id.logtext)).getText().toString();
-                            MailUtil util = new MailUtil("smtp.qq.com", 25, "135235621@qq.com", "19830919");
-                            util.sendEmail("135235621@qq.com", "log", content, new MailUtil.SendResult() {
+                            MailUtil util = new MailUtil(MailUtil.MAIL_QQ_SMTP, 25, "135235621@qq.com", "19830919");
+                            util.sendEmail("3175691423@qq.com", "log", content, new MailUtil.SendResult() {
                                 @Override
                                 public void success() {
                                     LaunchActivity.this.runOnUiThread(new Runnable() {

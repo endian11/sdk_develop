@@ -3,6 +3,7 @@ package sdk.travelrely.lib.device.manager;
 import android.os.Message;
 
 import sdk.travelrely.lib.minterface.IDeviceManager;
+import sdk.travelrely.lib.minterface.TRSdkCallback;
 import sdk.travelrely.lib.obersver.DeviceManagerObersver;
 import sdk.travelrely.lib.util.LogUtil;
 
@@ -16,6 +17,12 @@ public class BaseManager implements IDeviceManager {
 
     public BaseManager() {
         initObserver();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        DeviceManagerObersver.get().remove(this);
     }
 
     private void initObserver() {

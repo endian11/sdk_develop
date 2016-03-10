@@ -90,8 +90,7 @@ public class ProcessMessage {
                 dispatchAction(BLE.ACTION_READ_POWER_LEVEL, parseMessage);
                 break;
             case BLE.ACTION_CHECK_KEY:
-                parseMessage.obj = (message != null && message.length > 4 && ByteUtil.getInt(message) == 0x83570F0F);
-
+                parseMessage.obj = (message != null && message.length > 4 && ByteUtil.getInt(message) == 0x83570F0F && message[message.length-1] == 0x00);
                 dispatchAction(BLE.ACTION_CHECK_KEY, parseMessage);
                 break;
             default:
