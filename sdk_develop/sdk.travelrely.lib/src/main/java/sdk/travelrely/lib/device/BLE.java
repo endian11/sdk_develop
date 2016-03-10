@@ -59,16 +59,25 @@ public final class BLE {
      * ProcessMessage 中处理该处蓝牙设备返回结果数据
      * 判断执行下一步所要执行的事件
      */
-    public static final int ACTION_READ_MAC = 0;
-    public static final int ACTION_GEMERAT_KEY = 1;
-    public static final int ACTION_READ_COS_VERSION = 2;
-    public static final int ACTION_READ_MT_SN = 3;
-    public static final int ACTION_READ_POWER_LEVEL = 4;
-    public static final int ACTION_ISHAVE_KEY = 5;
-    public static final int ACTION_CHECK_KEY = 6;
-    public static final int ACTION_READ_SIMINFO = 7;
+    public static final int ACTION_READ_MAC = 0;//读取mac地址
+    public static final int ACTION_GEMERAT_KEY = 1;//写入key
+    public static final int ACTION_READ_COS_VERSION = 2;//读取cos版本号
+    public static final int ACTION_READ_MT_SN = 3;//读取mt-sn
+    public static final int ACTION_READ_POWER_LEVEL = 4;//读取电量
+    public static final int ACTION_ISHAVE_KEY = 5;//是否一些乳key
+    public static final int ACTION_CHECK_KEY = 6;//验证key
+    public static final int ACTION_READ_SIMINFO = 7;//读取sim卡信息
 
     public static int CURRENT_ACTION = -1;
+
+    /**
+     * 当前连接蓝牙的行为
+     */
+    public static final int BLE_MODE_NORMAL = 0;//正常状态
+    public static final int BLE_MODE_CALL = 1;//来电话状态
+    public static final int BLE_MODE_SMS = 2;//来短信的状态
+
+    public static int CURRENT_BLE_MODE = BLE_MODE_NORMAL;//当前状态 默认为 正常状态
 
 
 

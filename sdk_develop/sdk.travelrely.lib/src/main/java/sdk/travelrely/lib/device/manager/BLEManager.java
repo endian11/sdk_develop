@@ -102,6 +102,7 @@ public class BLEManager {
     public Boolean connect(final String address) {
         if (currentMac != null && address.equals(currentMac) && isConnect() && mGatt != null) {
             LogUtil.d(address + " is connected ! refused it");
+            BoxManager.getDefault().CheckTask();
             return false;
         }
 
@@ -157,10 +158,12 @@ public class BLEManager {
                         connect(currentMac);
                     } else {
                         LogUtil.d("reconnect faild ! current mac address is null or empty");
+                        TRSdk.getInstance().faild("蓝牙连接失败");
                     }
                 } else {
                     retry = 0;
                     LogUtil.d("reconnect for 3 times complete , faild");
+                    TRSdk.getInstance().faild("蓝牙连接失败");
                 }
             }
         }, 200);
@@ -171,7 +174,6 @@ public class BLEManager {
      * 断开连接
      */
     public void disconnect() {
-        //LogUtil.i(1, "AtoB002");
         LogUtil.d("BLEManager connection is disconnect");
         setConnect(false);
     }
