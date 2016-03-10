@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="section_listview">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/section_listview.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
